@@ -4,16 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" FontSize="18" FontFamily="Segoe UI Light"
+        Title="MainWindow" Height="900" Width="1000">
     <Grid>
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="20" />
-        <ColumnDefinition Width="auto" />
-        <ColumnDefinition Width="auto" />
-        <ColumnDefinition Width="auto" />
-        <ColumnDefinition Width="auto" />
-        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="20"/>
       </Grid.ColumnDefinitions>
 
       <Grid.RowDefinitions>
@@ -24,8 +24,48 @@
         <RowDefinition Height="auto" />
         <RowDefinition Height="auto" />
         <RowDefinition Height="auto" />
-        <RowDefinition Height="*" />
+        <RowDefinition Height="auto" />
         <RowDefinition Height="20" />
       </Grid.RowDefinitions>
+
+      <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" FontSize="72" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" Margin="20">
+            FITBooster<LineBreak />Home
+      </TextBlock>
+        
+      <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" FontSize="45" TextAlignment="Center" VerticalAlignment="Center">
+            My parameters
+      </TextBlock>
+      <TextBlock Grid.Column="3" Grid.Row="2"  FontSize="22" TextAlignment="Center" Margin="0,20">
+            current weight: <LineBreak/>
+            current BMI: <LineBreak/>
+            target BMI: 
+      </TextBlock>
+        
+      <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" FontSize="45" TextAlignment="Center" VerticalAlignment="Center">
+            Calorie Balance
+      </TextBlock>
+      <TextBlock Grid.Column="3" Grid.Row="3" FontSize="22" TextAlignment="Center" Margin="0,20">
+            consumed calories: <LineBreak/>
+            burned calories: <LineBreak/>
+            calories remaining:
+      </TextBlock>
+        
+      <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="45" TextAlignment="Center" VerticalAlignment="Center">
+            Food Diary
+      </TextBlock>
+      <TextBlock Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="4"
+                   TextAlignment="Center" VerticalAlignment="Center" Margin="0,20" FontSize="38">
+            Water Intake        
+      </TextBlock>
+        <Button Grid.Column="3" Grid.Row="5" FontSize="40" Content="+250 ml"/>
+      <TextBlock Grid.Column="4" Grid.Row="5"></TextBlock>
+      <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4" FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" Margin="20">
+            Calculate your BMI, BMR, AMR &amp; TER!
+      </TextBlock>
+      <Button Grid.Column="1" Grid.Row="7" Content="BMI" FontSize="45"/>
+      <Button Grid.Column="2" Grid.Row="7" Content="BMR" FontSize="45"/>
+      <Button Grid.Column="3" Grid.Row="7" Content="AMR" FontSize="45"/>
+      <Button Grid.Column="4" Grid.Row="7" Content="TER" FontSize="45"/>
+
     </Grid>
 </Window>
