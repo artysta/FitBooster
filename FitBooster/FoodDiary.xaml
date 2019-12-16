@@ -1,0 +1,144 @@
+﻿<Window x:Class="FitBooster.FoodDiary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitBooster"
+        mc:Ignorable="d"
+        Title="FoodDiary" Height="900" Width="1000" 
+        FontSize="26" FontFamily="Segoe UI Light">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" FontSize="72" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" Margin="20" Background="#FCF3CF">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock Foreground="#5DADE2 ">Fit</TextBlock>
+                    <TextBlock Foreground="#FF5733">Booster</TextBlock>
+                </WrapPanel>
+                <TextBlock Foreground="#D7BDE2" FontSize="45">Food Diary</TextBlock>
+            </WrapPanel>
+        </TextBlock>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" FontSize="35" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
+            Meal
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="2" FontSize="30" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>TOTAL</TextBlock>
+                    <TextBlock FontWeight="Light">[kcal]</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" FontSize="35" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            1st Meal
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="3" FontSize="35" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>{...}</TextBlock>
+                    <TextBlock Text=" "/>
+                    <TextBlock>calories</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            {product}
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="4" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>{...}</TextBlock>
+                    <TextBlock Text=" "/>
+                    <TextBlock>calories</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" FontSize="35" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            2nd Meal
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="5" FontSize="35" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>{...}</TextBlock>
+                    <TextBlock Text=" "/>
+                    <TextBlock>calories</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            {product}
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="6" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>{...}</TextBlock>
+                    <TextBlock Text=" "/>
+                    <TextBlock>calories</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+        
+
+        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" FontSize="35" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            3rd Meal
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="7" FontSize="35" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>{...}</TextBlock>
+                    <TextBlock Text=" "/>
+                    <TextBlock>calories</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            {product}
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="8" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>{...}</TextBlock>
+                    <TextBlock Text=" "/>
+                    <TextBlock>calories</TextBlock>
+                </WrapPanel>
+            </WrapPanel>
+        </TextBlock>
+
+    </Grid>
+</Window>
