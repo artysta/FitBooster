@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
-        mc:Ignorable="d" FontSize="18" FontFamily="Segoe UI Light"
-        Title="MainWindow" Height="900" Width="1000">
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="900" Width="1000"
+        FontSize="18" FontFamily="Segoe UI Light">
     <Grid>
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="20" />
@@ -28,8 +29,14 @@
         <RowDefinition Height="20" />
       </Grid.RowDefinitions>
 
-      <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" FontSize="72" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" Margin="20">
-            FITBooster<LineBreak />Home
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" FontSize="72" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" Margin="20" Background="#FCF3CF">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock Foreground="#5DADE2 ">Fit</TextBlock>
+                    <TextBlock Foreground="#FF5733">Booster</TextBlock>
+                </WrapPanel>
+            <TextBlock Foreground="#58D68D ">Home</TextBlock>
+            </WrapPanel>
       </TextBlock>
         
       <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" FontSize="45" TextAlignment="Center" VerticalAlignment="Center">
@@ -50,7 +57,7 @@
             calories remaining:
       </TextBlock>
         
-      <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="45" TextAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="45" TextAlignment="Center" VerticalAlignment="Center" PreviewMouseDown="TextBlock_PreviewMouseDown">
             Food Diary
       </TextBlock>
       <TextBlock Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="4"
