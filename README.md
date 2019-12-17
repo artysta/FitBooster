@@ -4,6 +4,10 @@ Prosta aplikacja, pozwalająca na tworzenie własnych jadłospisów na każdy dz
 
 Aplikacja wykonana na potrzeby projektu semestralnego z przedmiotu **Programowanie obiektowe - WSEI Kraków**.
 
+**Autorzy:**
+ - Adrian Kurek - https://github.com/artysta
+ - Natalia Krawczyk - https://github.com/nat13alia
+
 ## #2 Początkowe założenia
 
 **Wstępnie** aplikacja pozwalała będzie na:
@@ -16,3 +20,19 @@ Aplikacja wykonana na potrzeby projektu semestralnego z przedmiotu **Programowan
    - **TER** - dziennego zapotrzebowania na energię,
    - ...
 - korzystanie z kalkulatora spalonych kalorii, pozwalającego na obliczenie ilości kalorii, które spalane są podczas wykonywania różnych ćwiczeń (z uwzględnieniem czasu ich trwania, ilości powtórzeń, czy intensywności).
+
+## #3 Prototyp GUI aplikacji
+
+<table>
+   <tr>
+      <td>
+         <img src="/screenshots/home_page.png" alt="home_page.png"/>
+      </td>
+      <td>
+         <img src="/screenshots/bmi_bmr_amr_ter_calculators.png" alt="bmi_bmr_amr_ter_calculators.png"/>
+      </td>
+      <td>
+         <img src="/screenshots/food_diary.png" alt="food_diary.png"/>
+      </td>
+   </tr>
+</table>
