@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FitBoosterLibrary
+﻿namespace FitBoosterLibrary
 {
     public enum MeasurementUnits
     {
