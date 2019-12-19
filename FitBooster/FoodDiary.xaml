@@ -125,5 +125,17 @@
         <TextBlock Grid.Column="4" Grid.Row="8" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
+        <Button Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
+                FontSize="40" FontWeight="ExtraBold"
+                Padding="5" Margin="10">
+            <Button.Content>My Saved Set of Meals</Button.Content>
+        </Button>
+
+        <Button Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
+                FontSize="40" FontWeight="ExtraBold"
+                Padding="5" Margin="10">
+            <Button.Content>My Products</Button.Content>
+        </Button>
+
     </Grid>
 </Window>
