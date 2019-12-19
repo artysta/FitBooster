@@ -1,0 +1,142 @@
+﻿<Window x:Class="FitBooster.Calculators"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitBooster"
+        mc:Ignorable="d"
+        Title="Calculators" Height="800" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" FontSize="72" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" Margin="20" Background="#FCF3CF">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock Foreground="#5DADE2 ">Fit</TextBlock>
+                    <TextBlock Foreground="#FF5733">Booster</TextBlock>
+                </WrapPanel>
+                <TextBlock Foreground="#58D68D ">Calculators</TextBlock>
+            </WrapPanel>
+        </TextBlock>
+        
+        <!-- BMI, BMR, AMR & TER buttons -->
+        <Button x:Name="BMI_btn" Click="BMI_btn_Click" 
+                Grid.Column="1" Grid.Row="2" FontSize="45"
+                Content="BMI" 
+                Margin="10"/>
+        
+        <Button x:Name="BMR_btn" Click="BMR_btn_Click"
+                Grid.Column="2" Grid.Row="2" Content="BMR" FontSize="45"
+                Margin="10"/>
+
+        <Button x:Name="AMR_btn" Click="AMR_btn_Click"
+                Grid.Column="3" Grid.Row="2" Content="AMR" FontSize="45"
+                Margin="10"/>
+
+        <Button x:Name="TER_btn" Click="TER_btn_Click"
+                Grid.Column="4" Grid.Row="2" Content="TER" FontSize="45"
+                Margin="10"/>
+        
+        <!-- Gender Input -->
+        <Label x:Name="GenderInputLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3"
+               FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Right"
+               Margin="10">
+            Select your gender:
+        </Label>
+        <ComboBox  x:Name="GenderInput" Visibility="Collapsed"
+                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3"
+                   FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                   Margin="10">
+            <ComboBoxItem>Male</ComboBoxItem>
+            <ComboBoxItem>Female</ComboBoxItem>
+            <ComboBoxItem>Other</ComboBoxItem>
+        </ComboBox>
+        
+        <!-- Age Input -->
+        <Label x:Name="AgeInputLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4"
+               FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Right"
+               Margin="10">
+            Enter your age:
+        </Label>
+        <TextBox x:Name="AgeInput" Visibility="Collapsed"
+                 Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4"
+                 FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                 Margin="10"/>
+        
+        <!-- Weight Input -->
+        <Label x:Name="WeightInputLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5"
+               FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Right"
+               Margin="10">
+            Enter your weight:
+        </Label>
+        <TextBox x:Name="WeightInput" Visibility="Collapsed"
+                 Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"
+                 FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                 Margin="10"/>
+
+        <!-- Height Input -->
+        <Label x:Name="HeightInputLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6"
+               FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Right"
+               Margin="10">
+            Enter your height:
+        </Label>
+        <TextBox x:Name="HeightInput" Visibility="Collapsed"
+                 Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6"
+                 FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                 Margin="10"/>
+
+        <!-- Activity Level Input -->
+        <Label x:Name="ALInputLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7"
+               FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Right"
+               Margin="10">
+            Select your activity level:
+        </Label>
+        <ComboBox  x:Name="ALInput" Visibility="Collapsed"
+                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="7"
+                   FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                   Margin="10">
+            <ComboBoxItem>Very Low</ComboBoxItem>
+            <ComboBoxItem>Low</ComboBoxItem>
+            <ComboBoxItem>Medium</ComboBoxItem>
+            <ComboBoxItem>High</ComboBoxItem>
+            <ComboBoxItem>Very High</ComboBoxItem>
+        </ComboBox>
+
+        <!-- Result -->
+        <Label x:Name="CalcResultLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8"
+               FontSize="30" FontWeight="DemiBold" HorizontalAlignment="Right"
+               Margin="10">
+            Result
+        </Label>
+        <TextBlock x:Name="CalcResult" Visibility="Collapsed"
+                 Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="8"
+                 FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                 Margin="10"/>
+    </Grid>
+</Window>

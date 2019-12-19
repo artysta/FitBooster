@@ -31,5 +31,12 @@ namespace FitBooster
             this.Visibility = Visibility.Hidden;
             objFoodDiaryWindow.Show();
         }
+
+        private void Calc_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Calculators objCalculatorsWindow = new Calculators();
+            this.Visibility = Visibility.Hidden;
+            objCalculatorsWindow.Show();
+        }
     }
 }
