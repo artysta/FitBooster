@@ -154,14 +154,14 @@ namespace FitBoosterLibrary
         }
 
         // Returns text information about X (amount param) grams or mililiters of product.
-        public string GetProductPackageInfo(int amount) =>
+        public string GetProductAmountInfo(int amount) =>
             $"{amount} {Unit} of {Name} " +
             $"contains {GetProteinsPerAmount(amount)} g of proteins, " +
             $"{GetCarbsPerAmount(amount)} g of carbohydrates, " +
             $"{GetFatPerAmount(amount)} g of fat and {GetCaloriesPerAmount(amount)} calories.";
 
         // Returns text information about package of product.
-        public string GetProductAmountInfo() =>
+        public string GetProductPackageInfo() =>
             $"One package ({Weight} {Unit}) of {Name} " +
             $"contains {Proteins} g of proteins, " +
             $"{Carbs} g of carbohydrates, " +
