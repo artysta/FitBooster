@@ -76,7 +76,7 @@ namespace FitBoosterLibrary
             get => _weight;
             set
             {
-                if (value < 1) throw new ArgumentOutOfRangeException("weight", "Weight of product cannot be less than 1.");
+                if (value < 0) throw new ArgumentOutOfRangeException("weight", "Weight of product cannot be less than 0.");
                 _weight = value;
             }
         }
@@ -87,7 +87,7 @@ namespace FitBoosterLibrary
             get => _calories;
             set
             {
-                if (value < 1) throw new ArgumentOutOfRangeException("calories", "Amount of calories cannot be less than 1.");
+                if (value < 0) throw new ArgumentOutOfRangeException("calories", "Amount of calories cannot be less than 0.");
                 _calories = value;
             }
         }
@@ -98,7 +98,7 @@ namespace FitBoosterLibrary
             get => _fat;
             set
             {
-                if (value < 1) throw new ArgumentOutOfRangeException("fat", "Amount of fat cannot be less than 1.");
+                if (value < 0) throw new ArgumentOutOfRangeException("fat", "Amount of fat cannot be less than 0.");
                 _fat = value;
             }
         }
@@ -109,7 +109,7 @@ namespace FitBoosterLibrary
             get => _carbs;
             set
             {
-                if (value < 1) throw new ArgumentOutOfRangeException("carbs", "Amount of carbohydrates cannot be less than 1.");
+                if (value < 0) throw new ArgumentOutOfRangeException("carbs", "Amount of carbohydrates cannot be less than 0.");
                 _carbs = value;
             }
         }
@@ -120,52 +120,52 @@ namespace FitBoosterLibrary
             get => _proteins;
             set
             {
-                if (value < 1) throw new ArgumentOutOfRangeException("proteins", "Amount of proteins cannot be less than 1.");
+                if (value < 0) throw new ArgumentOutOfRangeException("proteins", "Amount of proteins cannot be less than 0.");
                 _proteins = value;
             }
         }
 
         // Returns amount of calories in X (amount param) grams or mililiters of product.
-        public double GetKcalPerAmount(int amount)
+        public double GetCaloriesPerAmount(int amount)
         {
-            if (amount < 1) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 1.");
+            if (amount < 0) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 0.");
             return Math.Round(amount * (Calories / Weight), 2);
         }
 
         // Returns amount of fat in X (amount param) grams or mililiters of product.
         public double GetFatPerAmount(int amount)
         {
-            if (amount < 1) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 1.");
+            if (amount < 0) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 0.");
             return Math.Round(amount * (Fat / Weight), 2);
         }
 
         // Returns amount of carbohydrates in X (amount param) grams or mililiters of product.
         public double GetCarbsPerAmount(int amount)
         {
-            if (amount < 1) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 1.");
+            if (amount < 0) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 0.");
             return Math.Round(amount * (Carbs / Weight), 2);
         }
 
         // Returns amount of proteins in X (amount param) grams or mililiters of product.
         public double GetProteinsPerAmount(int amount)
         {
-            if (amount < 1) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 1.");
+            if (amount < 0) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 0.");
             return Math.Round(amount * (Proteins / Weight), 2);
         }
 
         // Returns text information about X (amount param) grams or mililiters of product.
-        public string GetMacroPerAmount(int amount) =>
-            $"{amount}{Unit} of {Name} " +
-            $"contains {GetProteinsPerAmount(amount)}g of proteins, " +
-            $"{GetCarbsPerAmount(amount)}g of carbohydrates, " +
-            $"{GetFatPerAmount(amount)}g of fat and {GetKcalPerAmount(amount)} calories.";
+        public string GetProductPackageInfo(int amount) =>
+            $"{amount} {Unit} of {Name} " +
+            $"contains {GetProteinsPerAmount(amount)} g of proteins, " +
+            $"{GetCarbsPerAmount(amount)} g of carbohydrates, " +
+            $"{GetFatPerAmount(amount)} g of fat and {GetCaloriesPerAmount(amount)} calories.";
 
         // Returns text information about package of product.
-        public string GetMacroPerPackage() =>
-            $"One package ({Weight}{Unit}) of {Name} " +
-            $"contains {Proteins}g of proteins, " +
-            $"{Carbs}g of carbohydrates, " +
-            $"{Fat}g of fat and {Calories} calories.";
+        public string GetProductAmountInfo() =>
+            $"One package ({Weight} {Unit}) of {Name} " +
+            $"contains {Proteins} g of proteins, " +
+            $"{Carbs} g of carbohydrates, " +
+            $"{Fat} g of fat and {Calories} calories.";
 
         public override string ToString() =>
             $"[{nameof(Name)}] = {Name}, " +
