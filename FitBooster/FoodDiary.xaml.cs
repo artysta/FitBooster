@@ -23,5 +23,27 @@ namespace FitBooster
         {
             InitializeComponent();
         }
+
+        private void SMS_Button_Click(object sender, RoutedEventArgs e)
+        {
+            SavedMeals objCalculatorsWindow = new SavedMeals();
+            this.Visibility = Visibility.Hidden;
+            objCalculatorsWindow.Show();
+        }
+        
+        private void MP_Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyProducts objCalculatorsWindow = new MyProducts();
+            this.Visibility = Visibility.Hidden;
+            objCalculatorsWindow.Show();
+        }
+
+        private void Home_Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow objCalculatorsWindow = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            objCalculatorsWindow.Show();
+        }
+
     }
 }
