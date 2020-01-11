@@ -24,6 +24,17 @@ namespace FitBooster
             InitializeComponent();
         }
 
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddProductToMeal objCalculatorsWindow = new AddProductToMeal();
+            objCalculatorsWindow.Show();
+        }
+        
+        private void SaveSet_Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddProductToMeal objCalculatorsWindow = new AddProductToMeal();
+            objCalculatorsWindow.Show();
+        }
         private void SMS_Button_Click(object sender, RoutedEventArgs e)
         {
             SavedMeals objCalculatorsWindow = new SavedMeals();

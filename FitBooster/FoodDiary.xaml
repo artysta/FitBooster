@@ -73,7 +73,8 @@
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Grid.Column="1" Grid.Row="4"
+        <Button Click="Add_Button_Click" 
+                Grid.Column="1" Grid.Row="4"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
@@ -94,7 +95,8 @@
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Grid.Column="1" Grid.Row="6"
+        <Button Click="Add_Button_Click" 
+                Grid.Column="1" Grid.Row="6"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
@@ -114,7 +116,8 @@
         <TextBlock Grid.Column="3" Grid.Row="7" FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Grid.Column="1" Grid.Row="8"
+        <Button Click="Add_Button_Click" 
+                Grid.Column="1" Grid.Row="8"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
@@ -125,7 +128,7 @@
         <TextBlock Grid.Column="4" Grid.Row="8" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Click="SMS_Button_Click"
+        <Button Click="SaveSet_Button_Click"
                 Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
                 FontSize="40" FontWeight="ExtraBold" FontFamily="Segoe UI"
                 Padding="5" Margin="10">
