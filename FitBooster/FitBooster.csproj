@@ -67,6 +67,7 @@
     <Compile Include="SavedMeals.xaml.cs">
       <DependentUpon>SavedMeals.xaml</DependentUpon>
     </Compile>
+    <Compile Include="sv\VerticalScrollBarVisibility.cs" />
     <Page Include="AddNewProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

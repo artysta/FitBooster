@@ -5,8 +5,149 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="SavedMeals" Height="450" Width="800">
+        Title="SavedMeals" Height="850" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" 
+                   FontSize="48" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" 
+                   Margin="20" Background="#FCF3CF">
+            <WrapPanel Orientation="Vertical">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock Foreground="#5DADE2 ">Fit</TextBlock>
+                    <TextBlock Foreground="#FF5733">Booster</TextBlock>
+                </WrapPanel>
+                <TextBlock Foreground="#D7BDE2">Meal Sets</TextBlock>
+            </WrapPanel>
+        </TextBlock>
+
+
+        <TextBlock Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" 
+                   FontSize="45" TextAlignment="Center" FontWeight="Bold" 
+                   VerticalAlignment="Center"
+                   FontFamily="Segoe UI">
+            Name
+        </TextBlock>
         
+        <TextBlock Grid.Column="3" Grid.Row="2" 
+                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
+            Carbs
+        </TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="3" 
+                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
+            [g]
+        </TextBlock>
+
+        <TextBlock Grid.Column="4" Grid.Row="2" 
+                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
+            Proteins
+        </TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="3" 
+                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
+            [g]
+        </TextBlock>
+
+        <TextBlock Grid.Column="5" Grid.Row="2" 
+                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
+            Fat
+        </TextBlock>
+        <TextBlock Grid.Column="5" Grid.Row="3" 
+                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
+            [g]
+        </TextBlock>
+
+        <TextBlock Grid.Column="6" Grid.Row="2" 
+                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
+            TOTAL
+        </TextBlock>
+        <TextBlock Grid.Column="6" Grid.Row="3" 
+                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
+            [kcal]
+        </TextBlock>
+
+        <Button Click="Add_Button_Click" 
+                Grid.Column="1" Grid.Row="4"
+                FontSize="40" FontWeight="ExtraBold">
+            <Button.Content>+</Button.Content>
+        </Button>
+        
+        <TextBlock Grid.Column="2" Grid.Row="4" FontSize="25"
+                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
+                   VerticalAlignment="Center">
+            [Name]
+        </TextBlock>
+        
+        <TextBlock Grid.Column="3" Grid.Row="4" FontSize="25"
+                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
+                   VerticalAlignment="Center">
+            [Carbs]
+        </TextBlock>
+
+        <TextBlock Grid.Column="4" Grid.Row="4" FontSize="25"
+                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
+                   VerticalAlignment="Center">
+            [Proteins]
+        </TextBlock>
+
+        <TextBlock Grid.Column="5" Grid.Row="4" FontSize="25"
+                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
+                   VerticalAlignment="Center">
+            [Fat]
+        </TextBlock>
+
+        <TextBlock Grid.Column="6" Grid.Row="4" FontSize="25"
+                   TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI"
+                   VerticalAlignment="Center">
+            [TOTAL]
+        </TextBlock>
+
+        <Button Click="MP_Button_Click"
+                Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="11"
+                FontSize="40" FontWeight="Bold"
+                Padding="5" Margin="10">
+            <Button.Content>My Products</Button.Content>
+        </Button>
+
+        <Button Click="FD_Button_Click"
+                Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="12"
+                FontSize="40" FontWeight="Bold"
+                Padding="5" Margin="10" FontFamily="Segoe UI">
+            <Button.Content>Food Diary</Button.Content>
+        </Button>
+
+        <Button Click="Home_Button_Click"
+                Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="13"
+                FontSize="40" FontWeight="ExtraBold"
+                Padding="5" Margin="10" FontFamily="Segoe UI">
+            <Button.Content>Home</Button.Content>
+        </Button>
     </Grid>
 </Window>

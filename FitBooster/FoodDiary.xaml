@@ -38,7 +38,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" 
-                   FontSize="72" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" 
+                   FontSize="48" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" 
                    Margin="20" Background="#FCF3CF">
             <WrapPanel Orientation="Vertical">
                 <WrapPanel Orientation="Horizontal">
@@ -134,27 +134,29 @@
                 Padding="5" Margin="10">
             <Button.Content>Save this Set</Button.Content>
         </Button>
-        
+
         <Button Click="SMS_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
+                Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10"
                 FontSize="40" FontWeight="ExtraBold"
                 Padding="5" Margin="10">
-            <Button.Content>Saved Meals Sets</Button.Content>
+            <Button.Content>Saved Meal Sets</Button.Content>
         </Button>
 
         <Button Click="MP_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
+                Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="10"
                 FontSize="40" FontWeight="ExtraBold"
                 Padding="5" Margin="10">
             <Button.Content>My Products</Button.Content>
         </Button>
 
         <Button Click="Home_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="12"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10" FontFamily="Segoe UI">
             <Button.Content>Home</Button.Content>
         </Button>
-
+        <StackPanel>
+            
+        </StackPanel>
     </Grid>
 </Window>

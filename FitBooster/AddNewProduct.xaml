@@ -50,11 +50,11 @@
                Margin="10">
             Enter the name for the product:
         </TextBlock>
-        <TextBlock  x:Name="NameInput" 
+        <TextBox  x:Name="NameInput" 
                    Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-        </TextBlock>
+        </TextBox>
 
         <!-- Carbs Input -->
         <TextBlock x:Name="CarbsInputLabel" 
@@ -64,11 +64,11 @@
                Margin="10">
             Enter the amount of carbs:
         </TextBlock>
-        <TextBlock  x:Name="CarbsInput" 
+        <TextBox  x:Name="CarbsInput" 
                    Grid.Column="4" Grid.Row="3"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-        </TextBlock>
+        </TextBox>
 
         <!-- Proteins Input -->
         <TextBlock x:Name="ProteinsInputLabel" 
@@ -78,11 +78,11 @@
                Margin="10">
             Enter the amount of proteins:
         </TextBlock>
-        <TextBlock  x:Name="ProteinsInput" 
+        <TextBox  x:Name="ProteinsInput" 
                    Grid.Column="4" Grid.Row="4"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-        </TextBlock>
+        </TextBox>
 
         <!-- Fat Input -->
         <TextBlock x:Name="FatInputLabel" 
@@ -92,13 +92,13 @@
                Margin="10">
             Enter the amount of fat:
         </TextBlock>
-        <TextBlock  x:Name="FatInput" 
+        <TextBox  x:Name="FatInput" 
                    Grid.Column="4" Grid.Row="5"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-        </TextBlock>
+        </TextBox>
 
-        <Button Click="AP_Button_Click"
+        <Button Click="Save_Button_Click"
                 Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10">
