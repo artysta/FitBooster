@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddNewProduct.xaml.cs">
+      <DependentUpon>AddNewProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddProductToMeal.xaml.cs">
       <DependentUpon>AddProductToMeal.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,10 @@
     <Compile Include="SavedMeals.xaml.cs">
       <DependentUpon>SavedMeals.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddNewProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddProductToMeal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
