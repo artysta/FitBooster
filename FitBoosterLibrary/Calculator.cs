@@ -23,7 +23,7 @@ namespace FitBoosterLibrary
         {
             if (weight < 1 || weight > MAX_WEIGHT) throw new ArgumentOutOfRangeException("weight", "Weight must be between 1 and " + MAX_WEIGHT + ".");
             if (height < 1 || height > MAX_HEIGHT) throw new ArgumentOutOfRangeException("height", "Height must be between 1 and " + MAX_HEIGHT + ".");
-            return weight / Math.Pow((height / 100), 2);
+            return Math.Round(weight / Math.Pow((height / 100), 2), 2);
         }
 
         // BMR (Basal Metabolic Rate) - weight in kilograms (kg), height in centimeters (cm), age in years (y).
@@ -38,11 +38,11 @@ namespace FitBoosterLibrary
 
             if (gender == Genders.Male)
             {
-                return (9.99 * weight) + (6.25 * height) - (4.92 * age) + 5;
+                return Math.Round((9.99 * weight) + (6.25 * height) - (4.92 * age) + 5, 2);
             }
             else
             {
-                return (9.99 * weight) + (6.25 * height) - (4.92 * age) - 161;
+                return Math.Round((9.99 * weight) + (6.25 * height) - (4.92 * age) - 161, 2);
             }
         }
 
