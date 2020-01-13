@@ -27,6 +27,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
@@ -141,10 +142,17 @@
                  Margin="10"/>
 
         <Button Click="Home_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10" FontFamily="Segoe UI">
             <Button.Content>Home</Button.Content>
+        </Button>
+
+        <Button x:Name="btnCalculate" Visibility="Collapsed"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
+                FontSize="40" FontWeight="Bold"
+                Padding="5" Margin="10" FontFamily="Segoe UI" Click="Calculate_btn_Click">
+            <Button.Content>Calculate</Button.Content>
         </Button>
     </Grid>
 </Window>

@@ -51,6 +51,8 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Collapsed;
             CalcResult.Visibility = Visibility.Collapsed;
+
+            btnCalculate.Visibility = Visibility.Collapsed;
         }
         private void BMI_btn_Click(object sender, RoutedEventArgs e)
         {
@@ -64,6 +66,8 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+
+            btnCalculate.Visibility = Visibility.Visible;
         }
 
         private void BMR_btn_Click(object sender, RoutedEventArgs e)
@@ -84,6 +88,8 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+
+            btnCalculate.Visibility = Visibility.Visible;
         }
 
         private void AMR_btn_Click(object sender, RoutedEventArgs e)
@@ -107,6 +113,8 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+         
+            btnCalculate.Visibility = Visibility.Visible;
         }
 
         private void TER_btn_Click(object sender, RoutedEventArgs e)
@@ -130,6 +138,13 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+         
+            btnCalculate.Visibility = Visibility.Visible;
+        }
+
+        private void Calculate_btn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
