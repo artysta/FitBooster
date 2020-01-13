@@ -140,5 +140,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FitBoosterLibrary\FitBoosterLibrary.csproj">
+      <Project>{fb115caa-aaf2-4711-8818-07491119d2e0}</Project>
+      <Name>FitBoosterLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
