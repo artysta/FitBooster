@@ -12,12 +12,12 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
@@ -40,7 +40,7 @@
             </WrapPanel>
         </TextBlock>
         
-        <!-- BMI, BMR, AMR & TER buttons -->
+        <!-- BMI, BMR, AMR buttons -->
         <Button x:Name="BMI_btn" Click="BMI_btn_Click" 
                 Grid.Column="1" Grid.Row="2" FontSize="45"
                 Content="BMI" 
@@ -54,10 +54,6 @@
                 Grid.Column="3" Grid.Row="2" Content="AMR" FontSize="45"
                 Margin="10"/>
 
-        <Button x:Name="TER_btn" Click="TER_btn_Click"
-                Grid.Column="4" Grid.Row="2" Content="TER" FontSize="45"
-                Margin="10"/>
-        
         <!-- Gender Input -->
         <Label x:Name="GenderInputLabel" Visibility="Collapsed"
                Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3"
@@ -121,11 +117,11 @@
                    Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="7"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-            <ComboBoxItem>Very Low</ComboBoxItem>
-            <ComboBoxItem>Low</ComboBoxItem>
-            <ComboBoxItem>Medium</ComboBoxItem>
-            <ComboBoxItem>High</ComboBoxItem>
-            <ComboBoxItem>Very High</ComboBoxItem>
+            <ComboBoxItem Tag="1">Very Low</ComboBoxItem>
+            <ComboBoxItem Tag="1.25">Low</ComboBoxItem>
+            <ComboBoxItem Tag="1.5">Medium</ComboBoxItem>
+            <ComboBoxItem Tag="1.75">High</ComboBoxItem>
+            <ComboBoxItem Tag="2">Very High</ComboBoxItem>
         </ComboBox>
 
         <!-- Result -->
@@ -141,10 +137,17 @@
                  Margin="10"/>
 
         <Button Click="Home_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10" FontFamily="Segoe UI">
             <Button.Content>Home</Button.Content>
+        </Button>
+
+        <Button x:Name="btnCalculate" Visibility="Collapsed"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
+                FontSize="40" FontWeight="Bold"
+                Padding="5" Margin="10" FontFamily="Segoe UI" Click="Calculate_btn_Click">
+            <Button.Content>Calculate</Button.Content>
         </Button>
     </Grid>
 </Window>

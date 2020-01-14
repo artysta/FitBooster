@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using FitBoosterLibrary;
+using System.Globalization;
 
 namespace FitBooster
 {
@@ -19,9 +11,13 @@ namespace FitBooster
     /// </summary>
     public partial class Calculators : Window
     {
+        private Calculator calculator;
+        // String that helps to control which calculator has been selected.
+        private string selectedCalc;
         public Calculators()
         {
             InitializeComponent();
+            calculator = new Calculator();
         }
 
         private void Home_Button_Click(object sender, RoutedEventArgs e)
@@ -51,6 +47,8 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Collapsed;
             CalcResult.Visibility = Visibility.Collapsed;
+
+            btnCalculate.Visibility = Visibility.Collapsed;
         }
         private void BMI_btn_Click(object sender, RoutedEventArgs e)
         {
@@ -64,6 +62,10 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+
+            btnCalculate.Visibility = Visibility.Visible;
+
+            selectedCalc = "BMI";
         }
 
         private void BMR_btn_Click(object sender, RoutedEventArgs e)
@@ -84,6 +86,10 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+
+            btnCalculate.Visibility = Visibility.Visible;
+
+            selectedCalc = "BMR";
         }
 
         private void AMR_btn_Click(object sender, RoutedEventArgs e)
@@ -107,29 +113,48 @@ namespace FitBooster
 
             CalcResultLabel.Visibility = Visibility.Visible;
             CalcResult.Visibility = Visibility.Visible;
+         
+            btnCalculate.Visibility = Visibility.Visible;
+
+            selectedCalc = "AMR";
         }
 
-        private void TER_btn_Click(object sender, RoutedEventArgs e)
+        private void Calculate_btn_Click(object sender, RoutedEventArgs e)
         {
-            HideVisibility();
+            try
+            {
+                double weight = double.Parse(WeightInput.Text);
+                double height = double.Parse(HeightInput.Text);
 
-            GenderInputLabel.Visibility = Visibility.Visible;
-            GenderInput.Visibility = Visibility.Visible;
+                if (selectedCalc.Equals("BMI"))
+                {
+                    CalcResult.Text = calculator.CalculateBMI(weight, height).ToString();
+                    return;
+                }
 
-            AgeInputLabel.Visibility = Visibility.Visible;
-            AgeInput.Visibility = Visibility.Visible;
+                int age = int.Parse(AgeInput.Text);
+                string genderName = ((ComboBoxItem)GenderInput.SelectedItem).Content.ToString();
+                Genders gender = (Genders)Enum.Parse(typeof(Genders), genderName);
 
-            WeightInputLabel.Visibility = Visibility.Visible;
-            WeightInput.Visibility = Visibility.Visible;
+                if (selectedCalc.Equals("BMR"))
+                {
+                    CalcResult.Text = calculator.CalculateBMR(weight, height, age, gender).ToString();
+                    return;
+                }
 
-            HeightInputLabel.Visibility = Visibility.Visible;
-            HeightInput.Visibility = Visibility.Visible;
+                // Get activity rate by using Tag property of combo box item.
+                double activityLevel = double.Parse(((ComboBoxItem)ALInput.SelectedItem).Tag.ToString(), CultureInfo.InvariantCulture);
 
-            ALInputLabel.Visibility = Visibility.Visible;
-            ALInput.Visibility = Visibility.Visible;
-
-            CalcResultLabel.Visibility = Visibility.Visible;
-            CalcResult.Visibility = Visibility.Visible;
+                if (selectedCalc.Equals("AMR"))
+                {
+                    CalcResult.Text = calculator.CalculateAMR(weight, height, age, gender, activityLevel).ToString();
+                    return;
+                }
+            }
+            catch (FormatException)
+            {
+                CalcResult.Text = "invalid data";
+            }
         }
     }
 }
