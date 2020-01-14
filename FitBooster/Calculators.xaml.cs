@@ -119,33 +119,6 @@ namespace FitBooster
             selectedCalc = "AMR";
         }
 
-        private void TER_btn_Click(object sender, RoutedEventArgs e)
-        {
-            HideVisibility();
-
-            GenderInputLabel.Visibility = Visibility.Visible;
-            GenderInput.Visibility = Visibility.Visible;
-
-            AgeInputLabel.Visibility = Visibility.Visible;
-            AgeInput.Visibility = Visibility.Visible;
-
-            WeightInputLabel.Visibility = Visibility.Visible;
-            WeightInput.Visibility = Visibility.Visible;
-
-            HeightInputLabel.Visibility = Visibility.Visible;
-            HeightInput.Visibility = Visibility.Visible;
-
-            ALInputLabel.Visibility = Visibility.Visible;
-            ALInput.Visibility = Visibility.Visible;
-
-            CalcResultLabel.Visibility = Visibility.Visible;
-            CalcResult.Visibility = Visibility.Visible;
-         
-            btnCalculate.Visibility = Visibility.Visible;
-
-            selectedCalc = "TER";
-        }
-
         private void Calculate_btn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -177,12 +150,9 @@ namespace FitBooster
                     CalcResult.Text = calculator.CalculateAMR(weight, height, age, gender, activityLevel).ToString();
                     return;
                 }
-               
-                // TODO TER calculator
             }
-            catch (FormatException exception)
+            catch (FormatException)
             {
-                Console.WriteLine(exception);
                 CalcResult.Text = "invalid data";
             }
         }

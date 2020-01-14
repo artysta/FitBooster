@@ -12,7 +12,6 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
 
@@ -41,7 +40,7 @@
             </WrapPanel>
         </TextBlock>
         
-        <!-- BMI, BMR, AMR & TER buttons -->
+        <!-- BMI, BMR, AMR buttons -->
         <Button x:Name="BMI_btn" Click="BMI_btn_Click" 
                 Grid.Column="1" Grid.Row="2" FontSize="45"
                 Content="BMI" 
@@ -55,10 +54,6 @@
                 Grid.Column="3" Grid.Row="2" Content="AMR" FontSize="45"
                 Margin="10"/>
 
-        <Button x:Name="TER_btn" Click="TER_btn_Click"
-                Grid.Column="4" Grid.Row="2" Content="TER" FontSize="45"
-                Margin="10"/>
-        
         <!-- Gender Input -->
         <Label x:Name="GenderInputLabel" Visibility="Collapsed"
                Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3"
