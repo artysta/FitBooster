@@ -93,6 +93,12 @@
                Margin="10">
             Weight of one package:
         </TextBlock>
+        <TextBox  x:Name="WeightInput" Visibility="Collapsed"
+                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"
+                   FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                   Margin="10">
+        </TextBox>
+
         <!-- PackacgeCapacityInput -->
         <TextBlock x:Name="CapacityInputLabel" Visibility="Collapsed"
                Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5"
@@ -101,7 +107,7 @@
                Margin="10">
             Capacity of one package:
         </TextBlock>
-        <TextBox  x:Name="WeightCapacityInput" Visibility="Collapsed"
+        <TextBox  x:Name="CapacityInput"  Visibility="Collapsed"
                    Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">

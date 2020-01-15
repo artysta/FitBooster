@@ -78,18 +78,17 @@
         <ListView Name="productsList" 
                   Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="4" Grid.RowSpan="2"
                   FontSize="16" FontFamily="Segoe UI" 
-                  Height="200" 
-                  VerticalAlignment="Top">
+                  Height="200" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
-                    <GridViewColumn Header="Weight/Capacity" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
+                    <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
                     <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
                     <GridViewColumn Header="Proteins" Width="auto" DisplayMemberBinding="{Binding Proteins}" />
-                    <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
-                    <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
                 </GridView>
             </ListView.View>
         </ListView>
