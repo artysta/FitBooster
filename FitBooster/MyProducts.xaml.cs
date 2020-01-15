@@ -30,23 +30,29 @@ namespace FitBooster
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            AddNewProduct objCalculatorsWindow = new AddNewProduct();
+            AddNewProduct objANPWindow = new AddNewProduct();
             this.Close();
-            objCalculatorsWindow.Show();
+            objANPWindow.Top = 0;
+            objANPWindow.Left = 300;
+            objANPWindow.Show();
         }
 
         private void FD_Button_Click(object sender, RoutedEventArgs e)
         {
-            FoodDiary objCalculatorsWindow = new FoodDiary();
+            FoodDiary objFDWindow = new FoodDiary();
             this.Close();
-            objCalculatorsWindow.Show();
+            objFDWindow.Top = 0;
+            objFDWindow.Left = 300;
+            objFDWindow.Show();
         }
 
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objCalculatorsWindow = new MainWindow();
+            MainWindow objMainWindow = new MainWindow();
             this.Close();
-            objCalculatorsWindow.Show();
+            objMainWindow.Top = 0;
+            objMainWindow.Left = 300;
+            objMainWindow.Show();
         }
     }
 }

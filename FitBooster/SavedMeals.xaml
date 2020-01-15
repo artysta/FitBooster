@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="SavedMeals" Height="850" Width="800">
+        Title="SavedMeals" Height="900" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />

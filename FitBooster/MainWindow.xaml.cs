@@ -29,6 +29,8 @@ namespace FitBooster
         {
             FoodDiary objFoodDiaryWindow = new FoodDiary();
             this.Visibility = Visibility.Hidden;
+            objFoodDiaryWindow.Top = 0;
+            objFoodDiaryWindow.Left = 300;
             objFoodDiaryWindow.Show();
         }
 
@@ -36,6 +38,8 @@ namespace FitBooster
         {
             Calculators objCalculatorsWindow = new Calculators();
             this.Visibility = Visibility.Hidden;
+            objCalculatorsWindow.Top = 0;
+            objCalculatorsWindow.Left = 300; 
             objCalculatorsWindow.Show();
         }
     }

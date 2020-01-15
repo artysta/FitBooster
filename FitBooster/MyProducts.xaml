@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="MyProducts" Height="950" Width="800">
+        Title="MyProducts" Height="900" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />

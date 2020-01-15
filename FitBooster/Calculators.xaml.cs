@@ -22,9 +22,11 @@ namespace FitBooster
 
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow objCalculatorsWindow = new MainWindow();
+            MainWindow objMainWindow = new MainWindow();
             this.Visibility = Visibility.Hidden;
-            objCalculatorsWindow.Show();
+            objMainWindow.Top = 0;
+            objMainWindow.Left = 300;
+            objMainWindow.Show();
         }
 
 

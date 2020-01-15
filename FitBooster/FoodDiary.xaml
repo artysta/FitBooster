@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="FoodDiary" Height="1000" Width="1000" 
+        Title="FoodDiary" Height="900" Width="1000"
         FontSize="24" FontFamily="Segoe UI Light">
 
     <Grid>
