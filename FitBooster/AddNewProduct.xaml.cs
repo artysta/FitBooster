@@ -21,13 +21,27 @@ namespace FitBooster
             {
                 // Get informations about product.
                 string name = NameInput.Text;
-                string description = string.Empty;
-                MeasurementUnits unit = MeasurementUnits.Grams;
-                double weight = 0;
-                double calories = 0;
-                double carbs = double.Parse(CarbsInput.Text, CultureInfo.InvariantCulture);
-                double proteins = double.Parse(ProteinsInput.Text, CultureInfo.InvariantCulture);
-                double fat = double.Parse(FatInput.Text, CultureInfo.InvariantCulture);
+                string description = DescriptionInput.Text;
+
+                MeasurementUnits unit;
+                double weight;
+
+                if (UnitInput.SelectedIndex == 0)
+                {
+                    unit = MeasurementUnits.Grams;
+                    weight = GetParsedDouble(WeightInput.Text.ToString());
+                    
+                }
+                else
+                {
+                    unit = MeasurementUnits.Milliliters;
+                    weight = GetParsedDouble(CapacityInput.Text.ToString());
+                }
+                    
+                double calories = GetParsedDouble(CaloriesInput.Text.ToString());
+                double carbs = GetParsedDouble(CarbsInput.Text.ToString());
+                double proteins = GetParsedDouble(ProteinsInput.Text.ToString());
+                double fat = GetParsedDouble(FatInput.Text.ToString());
 
                 Product product = new Product(name, description, unit, weight, calories, carbs, proteins, fat);
 
@@ -36,14 +50,19 @@ namespace FitBooster
 
                 MyProducts myProducts = new MyProducts();
                 myProducts.Show();
-
-                // Close the window
                 this.Close();
             }
             catch (FormatException)
             {
                 MessageBox.Show("Cannot save new product! Invalid data!");
             }
+        }
+
+        // Parses string to double.
+        private double GetParsedDouble(string str)
+        {
+            Console.WriteLine(str);
+            return double.Parse(str, CultureInfo.InvariantCulture);
         }
 
         private void UnitInput_DropDownClosed(object sender, EventArgs e)
