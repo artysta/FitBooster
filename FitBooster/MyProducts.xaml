@@ -53,7 +53,7 @@
                    FontSize="25" TextAlignment="Center" FontWeight="Bold" 
                    VerticalAlignment="Center"
                    FontFamily="Segoe UI">
-            List of products (macronutrients in grams per package):
+            List of products <Span FontSize="20">(macronutrients in grams per package)</Span>:
         </TextBlock>
 
         <Button Click="Add_Button_Click" 
@@ -75,7 +75,10 @@
                 Padding="5" Margin="10" FontFamily="Segoe UI">
             <Button.Content>Home</Button.Content>
         </Button>
-        <ListView FontSize="16" FontFamily="Segoe UI" Name="productsList" Grid.Column="2" Grid.ColumnSpan="5" Height="200   " Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top">
+        <ListView Name="productsList" 
+                  Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="4" Grid.RowSpan="2"
+                  FontSize="16" FontFamily="Segoe UI" 
+                  Height="200" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
