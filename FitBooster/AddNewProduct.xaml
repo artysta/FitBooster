@@ -113,50 +113,64 @@
                    Margin="10">
         </TextBox>
 
+        <!-- Calories Input -->
+        <TextBlock x:Name="CaloriesInputLabel" 
+               Grid.Column="1" Grid.Row="7"
+               FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
+               TextWrapping="Wrap" TextAlignment="Center"
+               Margin="10">
+            Calories:
+        </TextBlock>
+        <TextBox  x:Name="CaloriesInput" 
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="7"
+                   FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                   Margin="10">
+        </TextBox>
+
         <!-- Carbs Input -->
         <TextBlock x:Name="CarbsInputLabel" 
-               Grid.Column="1" Grid.Row="7"
+               Grid.Column="1" Grid.Row="8"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Carbs:
         </TextBlock>
         <TextBox  x:Name="CarbsInput" 
-                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="7"
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <!-- Proteins Input -->
         <TextBlock x:Name="ProteinsInputLabel" 
-               Grid.Column="1" Grid.Row="8"
+               Grid.Column="1" Grid.Row="9"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Proteins:
         </TextBlock>
         <TextBox  x:Name="ProteinsInput" 
-                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8"
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="9"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <!-- Fat Input -->
         <TextBlock x:Name="FatInputLabel" 
-               Grid.Column="1" Grid.Row="9"
+               Grid.Column="1" Grid.Row="10"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Fat:
         </TextBlock>
         <TextBox  x:Name="FatInput" 
-                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="9"
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="10"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <Button Click="Save_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10">
             <Button.Content>Save</Button.Content>
