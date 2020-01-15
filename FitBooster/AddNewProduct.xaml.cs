@@ -21,13 +21,13 @@ namespace FitBooster
             {
                 // Get informations about product.
                 string name = NameInput.Text;
-                string description = string.Empty;
-                MeasurementUnits unit = MeasurementUnits.Grams;
-                double weight = 0;
-                double calories = 0;
+                string description = DescriptionInput.Text;
+                MeasurementUnits unit = (UnitInput.SelectedIndex == 0) ? MeasurementUnits.Grams : MeasurementUnits.Milliliters;
+                double weight = double.Parse(WeightCapacityInput.Text);
                 double carbs = double.Parse(CarbsInput.Text, CultureInfo.InvariantCulture);
                 double proteins = double.Parse(ProteinsInput.Text, CultureInfo.InvariantCulture);
                 double fat = double.Parse(FatInput.Text, CultureInfo.InvariantCulture);
+                double calories = 4*carbs+4*proteins+9*fat;
 
                 Product product = new Product(name, description, unit, weight, calories, carbs, proteins, fat);
 
@@ -52,16 +52,14 @@ namespace FitBooster
             if (UnitInput.SelectedIndex == 0)
             {
                 WeightInputLabel.Visibility = Visibility.Visible;
-                WeightInput.Visibility = Visibility.Visible;
                 CapacityInputLabel.Visibility = Visibility.Collapsed;
-                CapacityInput.Visibility = Visibility.Collapsed;
+                WeightCapacityInput.Visibility = Visibility.Visible;
             }
             else if (UnitInput.SelectedIndex == 1)
             {
                 WeightInputLabel.Visibility = Visibility.Collapsed;
-                WeightInput.Visibility = Visibility.Collapsed;
                 CapacityInputLabel.Visibility = Visibility.Visible;
-                CapacityInput.Visibility = Visibility.Visible;
+                WeightCapacityInput.Visibility = Visibility.Visible;
             }
         }
     }
