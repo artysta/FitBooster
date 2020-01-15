@@ -45,5 +45,24 @@ namespace FitBooster
                 MessageBox.Show("Cannot save new product! Invalid data!");
             }
         }
+
+        private void UnitInput_DropDownClosed(object sender, EventArgs e)
+        {
+
+            if (UnitInput.SelectedIndex == 0)
+            {
+                WeightInputLabel.Visibility = Visibility.Visible;
+                WeightInput.Visibility = Visibility.Visible;
+                CapacityInputLabel.Visibility = Visibility.Collapsed;
+                CapacityInput.Visibility = Visibility.Collapsed;
+            }
+            else if (UnitInput.SelectedIndex == 1)
+            {
+                WeightInputLabel.Visibility = Visibility.Collapsed;
+                WeightInput.Visibility = Visibility.Collapsed;
+                CapacityInputLabel.Visibility = Visibility.Visible;
+                CapacityInput.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

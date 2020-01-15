@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="AddNewProduct" Height="700" Width="800">
+        Title="AddNewProduct" Height="800" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -77,86 +77,86 @@
             Select the unit:
         </Label>
         <ComboBox  x:Name="UnitInput" 
-                   IsEditable="True" TextBoxBase.TextChanged="UnitInput_TextChanged"
+                   DropDownClosed="UnitInput_DropDownClosed"
                    Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-            <ComboBoxItem Name="g">g</ComboBoxItem>
-            <ComboBoxItem Name="ml">ml</ComboBoxItem>
+            <ComboBoxItem>g</ComboBoxItem>
+            <ComboBoxItem>ml</ComboBoxItem>
         </ComboBox>
         
         <!-- PackacgeWeight Input -->
         <TextBlock x:Name="WeightInputLabel" Visibility="Collapsed"
-               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Weight of one package:
         </TextBlock>
-        <TextBox  x:Name="WeightInput" 
-                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4"
+        <TextBox  x:Name="WeightInput" Visibility="Collapsed"
+                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
-        <!-- PackacgeVolume Input -->
-        <TextBlock x:Name="VolumeInputLabel" Visibility="Collapsed"
-               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4"
+        <!-- PackacgeCapacityInput -->
+        <TextBlock x:Name="CapacityInputLabel" Visibility="Collapsed"
+               Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
-            Weight of one package:
+            Capacity of one package:
         </TextBlock>
-        <TextBox  x:Name="VolumeInput" 
-                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4"
+        <TextBox  x:Name="CapacityInput"  Visibility="Collapsed"
+                   Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <!-- Carbs Input -->
         <TextBlock x:Name="CarbsInputLabel" 
-               Grid.Column="1" Grid.Row="5"
+               Grid.Column="1" Grid.Row="7"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Carbs:
         </TextBlock>
         <TextBox  x:Name="CarbsInput" 
-                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="5"
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="7"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <!-- Proteins Input -->
         <TextBlock x:Name="ProteinsInputLabel" 
-               Grid.Column="1" Grid.Row="6"
+               Grid.Column="1" Grid.Row="8"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Proteins:
         </TextBlock>
         <TextBox  x:Name="ProteinsInput" 
-                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6"
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <!-- Fat Input -->
         <TextBlock x:Name="FatInputLabel" 
-               Grid.Column="1" Grid.Row="7"
+               Grid.Column="1" Grid.Row="9"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Fat:
         </TextBlock>
         <TextBox  x:Name="FatInput" 
-                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="7"
+                   Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="9"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
         </TextBox>
 
         <Button Click="Save_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10">
             <Button.Content>Save</Button.Content>
