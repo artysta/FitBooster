@@ -49,6 +49,8 @@ namespace FitBooster
             CalcResult.Visibility = Visibility.Collapsed;
 
             btnCalculate.Visibility = Visibility.Collapsed;
+
+            CalcResult.Text = "";
         }
         private void BMI_btn_Click(object sender, RoutedEventArgs e)
         {
