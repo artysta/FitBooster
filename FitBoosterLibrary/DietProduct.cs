@@ -36,46 +36,52 @@ namespace FitBoosterLibrary
             Amount = amount;
         }
 
-        // Returns name of product added to the diet.
-        public string GetName()
+        // Returns or sets name of the product.
+        public string Name
         {
-            return Product.Name;
+            get => Product.Name;
         }
 
-        // Returns description of product added to the diet.
-        public string GetDescription()
+        // Returns or sets description of the product.
+        public string Description
         {
-            return Product.Description;
+            get => Product.Description;
         }
 
-        // Returns measurement unit of product added to the diet.
-        public string GetUnit()
+        // Returns or sets unit of measurement of one product package.
+        public string Unit
         {
-            return Product.Unit;
+            get => Product.Unit;
         }
 
-        // Returns amount of calories contained in product added to the diet.
-        public double GetCalories()
+        // Returns or sets weight of one product package.
+        public double Weight
         {
-            return Product.GetCaloriesPerAmount(Amount);
+            get => Amount;
         }
 
-        // Returns amount of fat contained in product added to the diet.
-        public double GetFat()
+        // Returns or sets amount of calories contained in one product package.
+        public double Calories
         {
-            return Product.GetCaloriesPerAmount(Amount);
+            get => Product.GetCaloriesPerAmount(Amount);
         }
 
-        // Returns amount of carbs contained in product added to the diet.
-        public double GetCarbs()
+        // Returns or sets amount of fat contained in one product package.
+        public double Fat
         {
-            return Product.GetCaloriesPerAmount(Amount);
+            get => Product.GetFatPerAmount(Amount);
         }
 
-        // Returns amount of proteins contained in product added to the diet.
-        public double GetProteins()
+        // Returns or sets amount of carbohydrates contained in one product package.
+        public double Carbs
         {
-            return Product.GetCaloriesPerAmount(Amount);
+            get => Product.GetCarbsPerAmount(Amount);
+        }
+
+        // Returns or sets amount of proteins contained in one product package.
+        public double Proteins
+        {
+            get => Product.GetProteinsPerAmount(Amount);
         }
     }
 }
