@@ -45,7 +45,7 @@ namespace FitBoosterLibrary
 
             foreach (DietProduct p in Products)
             {
-                total += p.GetCalories();
+                total += p.Calories;
             }
 
             return total;
@@ -61,7 +61,7 @@ namespace FitBoosterLibrary
 
             for (int i = 0; i < Products.Count; i++)
             {
-                sb.Append($"{Products[i].GetName()} ({Products[i].Amount} {Products[i].GetUnit()})");
+                sb.Append($"{Products[i].Name} ({Products[i].Amount} {Products[i].Unit})");
                 if (i == Products.Count - 1)
                 {
                     sb.Append($". Sum of calories is {GetTotalCalories()}.");
