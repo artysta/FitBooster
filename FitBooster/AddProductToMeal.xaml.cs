@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Collections.Generic;
+using FitBoosterLibrary;
 
 namespace FitBooster
 {
@@ -19,14 +10,37 @@ namespace FitBooster
     /// </summary>
     public partial class AddProductToMeal : Window
     {
-        public AddProductToMeal()
+        private IFoodDiaryWindow diary;
+        private List<Product> products;
+        private string mealType;
+
+        public AddProductToMeal(IFoodDiaryWindow diary, string mealType)
         {
             InitializeComponent();
+            this.diary = diary;
+            this.mealType = mealType;
+
+            IProductsProvider provider = new SampleProductsProvider();
+            products = provider.GetAllProducts();
+
+            foreach (Product p in products)
+                ProductInput.Items.Add(p.Name);
         }
 
         private void AP_Button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                int i = ProductInput.SelectedIndex;
+                int amount = int.Parse(AmountInput.Text);
 
+                DietProduct product = new DietProduct(products[i], amount);
+                diary.AddProductToList(product, mealType);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Cannot add product to meal! Invalid data!");
+            }
         }
     }
 }
