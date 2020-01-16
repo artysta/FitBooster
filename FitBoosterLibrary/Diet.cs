@@ -16,6 +16,9 @@ namespace FitBoosterLibrary
         public string Name { get => _name; set { _name = value; } }
         // Returns or sets description of diet;
         public string Description { get => _description; set { _description = value; } }
+        // Returns or sets description of diet;
+        public double TotalCalories { get => GetTotalCalories();}
+
         // Returns or sets list of products.
         public List<DietProduct> Products { get => _products; set { _products = value; } }
 
