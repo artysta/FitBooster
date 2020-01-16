@@ -43,22 +43,20 @@
 
 
         <!-- Name Input -->
-        <TextBlock x:Name="NameInputLabel" 
+        <TextBlock x:Name="ProductInputLabel" 
                Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3"
                FontSize="28" FontWeight="DemiBold" HorizontalAlignment="Right"
                TextWrapping="Wrap" TextAlignment="Center"
                Margin="10">
             Select the product from the list:
         </TextBlock>
-        <ComboBox  x:Name="NameInput" 
+        <ComboBox  x:Name="ProductInput"
                    Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-            <ComboBoxItem>[Product]</ComboBoxItem>
-            <ComboBoxItem>[Product]</ComboBoxItem>
         </ComboBox>
 
-        
+
 
         <!-- Amount Input -->
         <TextBlock x:Name="AmountInputLabel" 
@@ -72,7 +70,7 @@
                    Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"
                    FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
                    Margin="10">
-            
+
         </TextBox>
 
         <Button Click="AP_Button_Click"
