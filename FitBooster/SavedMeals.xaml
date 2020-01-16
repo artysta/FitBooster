@@ -50,84 +50,24 @@
         </TextBlock>
 
 
-        <TextBlock Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" 
-                   FontSize="45" TextAlignment="Center" FontWeight="Bold" 
-                   VerticalAlignment="Center"
-                   FontFamily="Segoe UI">
-            Name
-        </TextBlock>
-        
-        <TextBlock Grid.Column="3" Grid.Row="2" 
-                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
-            Carbs
-        </TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="3" 
-                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
-            [g]
-        </TextBlock>
-
-        <TextBlock Grid.Column="4" Grid.Row="2" 
-                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
-            Proteins
-        </TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="3" 
-                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
-            [g]
-        </TextBlock>
-
-        <TextBlock Grid.Column="5" Grid.Row="2" 
-                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
-            Fat
-        </TextBlock>
-        <TextBlock Grid.Column="5" Grid.Row="3" 
-                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
-            [g]
-        </TextBlock>
-
-        <TextBlock Grid.Column="6" Grid.Row="2" 
-                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
-            TOTAL
-        </TextBlock>
-        <TextBlock Grid.Column="6" Grid.Row="3" 
-                   FontSize="30" TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI">
-            [kcal]
-        </TextBlock>
-
         <Button Click="Add_Button_Click" 
-                Grid.Column="1" Grid.Row="4"
+                Grid.Column="1" Grid.RowSpan="2" Grid.Row="4"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
-        
-        <TextBlock Grid.Column="2" Grid.Row="4" FontSize="25"
-                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            [Name]
-        </TextBlock>
-        
-        <TextBlock Grid.Column="3" Grid.Row="4" FontSize="25"
-                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            [Carbs]
-        </TextBlock>
 
-        <TextBlock Grid.Column="4" Grid.Row="4" FontSize="25"
-                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            [Proteins]
-        </TextBlock>
-
-        <TextBlock Grid.Column="5" Grid.Row="4" FontSize="25"
-                   TextAlignment="Center" FontWeight="Light"  FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            [Fat]
-        </TextBlock>
-
-        <TextBlock Grid.Column="6" Grid.Row="4" FontSize="25"
-                   TextAlignment="Center" FontWeight="Light" FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            [TOTAL]
-        </TextBlock>
+        <ListView Name="dietsList" 
+                  Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="4" Grid.RowSpan="2"
+                  FontSize="16" FontFamily="Segoe UI" 
+                  Height="200" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="TotalCalories" Width="auto" DisplayMemberBinding="{Binding TotalCalories}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
         <Button Click="MP_Button_Click"
                 Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="11"
