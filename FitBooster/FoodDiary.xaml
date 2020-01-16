@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="FoodDiary" Height="900" Width="1000"
+        Title="FoodDiary" Height="1000" Width="1000" 
         FontSize="24" FontFamily="Segoe UI Light">
 
     <Grid>
@@ -64,7 +64,7 @@
             </WrapPanel>
         </TextBlock>
 
-
+        <!-- BREAKFAST -->
         <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" 
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
             BREAKFAST
@@ -73,20 +73,35 @@
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Click="Add_Button_Click" 
+        <Button Click="Add_Button_Click"
+                Tag="Breakfast"
                 Grid.Column="1" Grid.Row="4"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
-        <TextBlock Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="3" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            Add a product
-        </TextBlock>
+        <ListView Name="breakfastProductsList" 
+                  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="1"
+                  FontSize="16" FontFamily="Segoe UI" 
+                  Height="100" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
+                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
+                    <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
+                    <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
+                    <GridViewColumn Header="Proteins" Width="auto" DisplayMemberBinding="{Binding Proteins}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         <TextBlock Grid.Column="4" Grid.Row="4" 
                    FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
 
+        <!-- LUNCH -->
         <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" 
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
             LUNCH
@@ -95,20 +110,35 @@
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Click="Add_Button_Click" 
+        <Button Click="Add_Button_Click"
+                Tag="Lunch"
                 Grid.Column="1" Grid.Row="6"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
-        <TextBlock Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="3" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            Add a product
-        </TextBlock>
+
+        <ListView Name="lunchProductsList" 
+                  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" Grid.RowSpan="1"
+                  FontSize="16" FontFamily="Segoe UI" 
+                  Height="100" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
+                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
+                    <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
+                    <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
+                    <GridViewColumn Header="Proteins" Width="auto" DisplayMemberBinding="{Binding Proteins}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         <TextBlock Grid.Column="4" Grid.Row="6" 
                    FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-
+        <!-- DINNER -->
         <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" 
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
             DINNER
@@ -116,15 +146,29 @@
         <TextBlock Grid.Column="3" Grid.Row="7" FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
-        <Button Click="Add_Button_Click" 
+        <Button Click="Add_Button_Click"
+                Tag="Dinner"
                 Grid.Column="1" Grid.Row="8"
                 FontSize="40" FontWeight="ExtraBold">
             <Button.Content>+</Button.Content>
         </Button>
-        <TextBlock Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="3" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI"
-                   VerticalAlignment="Center">
-            Add a product
-        </TextBlock>
+        <ListView Name="dinnerProductsList" 
+                  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8" Grid.RowSpan="1"
+                  FontSize="16" FontFamily="Segoe UI" 
+                  Height="100" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
+                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
+                    <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
+                    <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
+                    <GridViewColumn Header="Proteins" Width="auto" DisplayMemberBinding="{Binding Proteins}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         <TextBlock Grid.Column="4" Grid.Row="8" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
@@ -156,7 +200,7 @@
             <Button.Content>Home</Button.Content>
         </Button>
         <StackPanel>
-            
+
         </StackPanel>
     </Grid>
 </Window>
