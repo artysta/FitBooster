@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using FitBoosterLibrary;
 
 namespace FitBooster
 {
     /// <summary>
     /// Interaction logic for FoodDiary.xaml
     /// </summary>
-    public partial class FoodDiary : Window
+    public partial class FoodDiary : Window, IFoodDiaryWindow
     {
         public FoodDiary()
         {
@@ -26,8 +16,10 @@ namespace FitBooster
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            AddProductToMeal objCalculatorsWindow = new AddProductToMeal();
-            objCalculatorsWindow.Show();
+            // Get tag of button.
+            string mealType = ((Button)e.Source).Tag.ToString();
+            AddProductToMeal addProductToMeal = new AddProductToMeal(this, mealType);
+            addProductToMeal.Show();
         }
         
         private void SaveSet_Button_Click(object sender, RoutedEventArgs e)
@@ -59,6 +51,17 @@ namespace FitBooster
             objMainWindow.Top = 0;
             objMainWindow.Left = 300;
             objMainWindow.Show();
+        }
+
+        // Interface method.
+        public void AddProductToList(DietProduct product, string mealType)
+        {
+            if (mealType.Equals("Breakfast"))
+                breakfastProductsList.Items.Add(product);
+            else if (mealType.Equals("Lunch"))
+                lunchProductsList.Items.Add(product);
+            else if (mealType.Equals("Dinner"))
+                dinnerProductsList.Items.Add(product);
         }
 
     }
