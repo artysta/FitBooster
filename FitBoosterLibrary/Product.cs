@@ -1,5 +1,8 @@
 ﻿using System;
-
+using System.Xml;
+using System.Xml.Linq;
+using System.IO;
+using System.Text;
 namespace FitBoosterLibrary
 {
     public class Product
@@ -152,6 +155,57 @@ namespace FitBoosterLibrary
             if (amount < 0) throw new ArgumentOutOfRangeException("amount", "Amount parameter cannot be less than 0.");
             return Math.Round(amount * (Proteins / Weight), 2);
         }
+
+        // Saves products to an XML file
+        public void SaveProduct()
+        {
+            string filename = @"N:\WSEI\III semestr\Programowanie obiektowe w C#\FitBooster\FitBooster\XMLFiles\Products.xml";
+
+            bool fileExists = File.Exists(filename);
+
+            if (fileExists)
+            {
+                XDocument doc = XDocument.Load(filename);
+
+                XElement newProduct = new XElement("Product",
+                    new XElement("Name", this.Name),
+                    new XElement("Description", this.Description),
+                    new XElement("Unit", this.Unit),
+                    new XElement("Weight", this.Weight.ToString()),
+                    new XElement("Calories", this.Calories.ToString()),
+                    new XElement("Fat", this.Fat.ToString()),
+                    new XElement("Carbs", this.Carbs.ToString()),
+                    new XElement("Proteins", this.Proteins.ToString()));
+
+                doc.Element("Root").Add(newProduct);
+                doc.Save(filename);
+
+            }
+            else
+            {
+                var xmlTextWriter = new XmlTextWriter(filename, System.Text.Encoding.UTF8) { Formatting = Formatting.Indented };
+
+                xmlTextWriter.WriteStartDocument();
+
+                xmlTextWriter.WriteStartElement("Root");
+                xmlTextWriter.WriteStartElement("Product");
+                xmlTextWriter.WriteElementString("Name", this.Name);
+                xmlTextWriter.WriteElementString("Description", this.Description);
+                xmlTextWriter.WriteElementString("Unit", this.Unit);
+                xmlTextWriter.WriteElementString("Weight", this.Weight.ToString());
+                xmlTextWriter.WriteElementString("Calories", this.Calories.ToString());
+                xmlTextWriter.WriteElementString("Fat", this.Fat.ToString());
+                xmlTextWriter.WriteElementString("Carbs", this.Carbs.ToString());
+                xmlTextWriter.WriteElementString("Proteins", this.Proteins.ToString());
+
+                xmlTextWriter.WriteEndElement();
+                xmlTextWriter.WriteEndElement();
+
+                xmlTextWriter.WriteEndDocument();
+                xmlTextWriter.Close();
+            }
+        }
+
 
         // Returns text information about X (amount param) grams or mililiters of product.
         public string GetProductAmountInfo(int amount) =>
