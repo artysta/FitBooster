@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Product>
+    <Name>Bread</Name>
+    <Description>Super</Description>
+    <Unit>g</Unit>
+    <Weight>456</Weight>
+    <Calories>4</Calories>
+    <Fat>5</Fat>
+    <Carbs>6</Carbs>
+    <Proteins>7</Proteins>
+  </Product>
+  <Product>
+    <Name>Milk</Name>
+    <Description>Great!</Description>
+    <Unit>ml</Unit>
+    <Weight>567</Weight>
+    <Calories>56</Calories>
+    <Fat>56</Fat>
+    <Carbs>4</Carbs>
+    <Proteins>3</Proteins>
+  </Product>
+</Root>
