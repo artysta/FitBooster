@@ -50,27 +50,15 @@
         </TextBlock>
 
 
-        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" 
+        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" 
                    FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
             Meal
         </TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="2" 
-                   FontSize="45" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI">
-            <WrapPanel Orientation="Vertical">
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>TOTAL</TextBlock>
-                    <TextBlock FontWeight="Light">[kcal]</TextBlock>
-                </WrapPanel>
-            </WrapPanel>
-        </TextBlock>
 
         <!-- BREAKFAST -->
-        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" 
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" 
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
             BREAKFAST
-        </TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="3" 
-                   FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
         <Button Click="Add_Button_Click"
@@ -80,7 +68,7 @@
             <Button.Content>+</Button.Content>
         </Button>
         <ListView Name="breakfastProductsList" 
-                  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="1"
+                  Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="4" Grid.RowSpan="1"
                   FontSize="16" FontFamily="Segoe UI" 
                   Height="100" VerticalAlignment="Top">
             <ListView.View>
@@ -96,18 +84,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock Grid.Column="4" Grid.Row="4" 
-                   FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
-        </TextBlock>
-
 
         <!-- LUNCH -->
-        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" 
+        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" 
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
             LUNCH
-        </TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="5" 
-                   FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
         <Button Click="Add_Button_Click"
@@ -118,7 +99,7 @@
         </Button>
 
         <ListView Name="lunchProductsList" 
-                  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" Grid.RowSpan="1"
+                  Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="6" Grid.RowSpan="1"
                   FontSize="16" FontFamily="Segoe UI" 
                   Height="100" VerticalAlignment="Top">
             <ListView.View>
@@ -134,16 +115,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock Grid.Column="4" Grid.Row="6" 
-                   FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
-        </TextBlock>
 
         <!-- DINNER -->
-        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" 
+        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="4" 
                    FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
             DINNER
-        </TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="7" FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
         <Button Click="Add_Button_Click"
@@ -153,7 +129,7 @@
             <Button.Content>+</Button.Content>
         </Button>
         <ListView Name="dinnerProductsList" 
-                  Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="8" Grid.RowSpan="1"
+                  Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="8" Grid.RowSpan="1"
                   FontSize="16" FontFamily="Segoe UI" 
                   Height="100" VerticalAlignment="Top">
             <ListView.View>
@@ -178,20 +154,23 @@
                 Padding="5" Margin="10">
             <Button.Content>Save this Set</Button.Content>
         </Button>
+        <WrapPanel Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="10"
+                   HorizontalAlignment="Center">
+            
+            <Button Click="SMS_Button_Click"
+                    FontSize="40" FontWeight="ExtraBold"
+                    Padding="5" Margin="10">
+                <Button.Content>Saved Meal Sets</Button.Content>
+            </Button>
 
-        <Button Click="SMS_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="10"
-                FontSize="40" FontWeight="ExtraBold"
-                Padding="5" Margin="10">
-            <Button.Content>Saved Meal Sets</Button.Content>
-        </Button>
-
-        <Button Click="MP_Button_Click"
-                Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="10"
-                FontSize="40" FontWeight="ExtraBold"
-                Padding="5" Margin="10">
-            <Button.Content>My Products</Button.Content>
-        </Button>
+            <Button Click="MP_Button_Click"
+                    FontSize="40" FontWeight="ExtraBold"
+                    Padding="5" Margin="10">
+                <Button.Content>My Products</Button.Content>
+            </Button>
+            
+        </WrapPanel>
+        
 
         <Button Click="Home_Button_Click"
                 Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
