@@ -10,7 +10,7 @@ namespace FitBoosterLibrary
         // Description of diet.
         private string _description;
         // List of products.
-        private List<DietProduct> _products;
+        private List<DietProduct> _products = new List<DietProduct>();
 
         // Returns or sets name of diet;
         public string Name { get => _name; set { _name = value; } }
@@ -22,11 +22,12 @@ namespace FitBoosterLibrary
         // Returns or sets list of products.
         public List<DietProduct> Products { get => _products; set { _products = value; } }
 
+        public Diet() { }
+
         public Diet(string name, string description)
         {
             Name = name;
             Description = description;
-            Products = new List<DietProduct>();
         }
 
         // Adds product to the list.
