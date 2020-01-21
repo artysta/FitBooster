@@ -20,7 +20,7 @@ namespace FitBooster
             this.diary = diary;
             this.mealType = mealType;
 
-            IProductsProvider provider = new SampleProductsProvider();
+            IProductsProvider provider = new XMLProductsParser();
             products = provider.GetAllProducts();
 
             foreach (Product p in products)

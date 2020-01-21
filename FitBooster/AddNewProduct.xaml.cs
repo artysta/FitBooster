@@ -44,9 +44,8 @@ namespace FitBooster
                 double fat = GetParsedDouble(FatInput.Text.ToString());
 
                 Product product = new Product(name, description, unit, weight, calories, carbs, proteins, fat);
-                product.SaveProduct();
 
-                IProductsProvider provider = new SampleProductsProvider();
+                IProductsProvider provider = new XMLProductsParser();
                 provider.AddProduct(product);
 
                 MyProducts myProducts = new MyProducts();

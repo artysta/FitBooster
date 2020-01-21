@@ -18,11 +18,12 @@ namespace FitBooster
 
         public void AddProductsToList()
         {
-            IProductsProvider provider = new SampleProductsProvider();
+            IProductsProvider provider = new XMLProductsParser();
             List<Product> products = provider.GetAllProducts();
 
             foreach (Product p in products)
             {
+                Console.WriteLine(p.ToString());
                 if (productsList.Items.Contains(p)) return;
                 productsList.Items.Add(p);
             }
