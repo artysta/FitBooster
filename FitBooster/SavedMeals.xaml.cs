@@ -50,8 +50,10 @@ namespace FitBooster
 
         public void AddDietsToList()
         {
-            IDietsProvider provider = new SampleDietsProvider();
+            IDietsProvider provider = new XMLDietsParser();
             List<Diet> diets = provider.GetAllDiets();
+
+            if (diets == null) return;
 
             foreach (Diet d in diets)
             {

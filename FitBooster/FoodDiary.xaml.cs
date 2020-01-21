@@ -24,6 +24,8 @@ namespace FitBooster
         
         private void SaveSet_Button_Click(object sender, RoutedEventArgs e)
         {
+            if (AreListsEmpty()) return;
+
             Diet diet = new Diet("N/A", "N/A");
 
             for (int i = 0; i < breakfastProductsList.Items.Count; i++)
@@ -35,7 +37,7 @@ namespace FitBooster
             for (int i = 0; i < dinnerProductsList.Items.Count; i++)
                 diet.AddProduct((DietProduct)dinnerProductsList.Items[i]);
 
-            SampleDietsProvider provider = new SampleDietsProvider();
+            IDietsProvider provider = new XMLDietsParser();
 
             provider.AddDiet(diet);
 
