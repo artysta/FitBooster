@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="FoodDiary" Height="1000" Width="1000" 
+        Title="FoodDiary" Height="1200" Width="1000" 
         FontSize="24" FontFamily="Segoe UI Light">
 
     <Grid>
@@ -20,6 +20,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
@@ -148,13 +149,38 @@
         <TextBlock Grid.Column="4" Grid.Row="8" FontSize="26" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
         </TextBlock>
 
+        <WrapPanel Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="9"
+                   HorizontalAlignment="Center">
+
+            <TextBlock
+                   FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            Set name
+            </TextBlock>
+            <TextBox Name="SetName"
+                   FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                   Margin="10" Width="250">
+            </TextBox>
+
+            <TextBlock
+                   FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            Set description
+            </TextBlock>
+            <TextBox Name="SetDescription"
+                   FontSize="28" FontWeight="SemiBold" VerticalAlignment="Center"
+                   Margin="10" Width="250">
+            </TextBox>
+
+        </WrapPanel>
+
+        
+
         <Button Click="SaveSet_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="9"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="10"
                 FontSize="40" FontWeight="ExtraBold" FontFamily="Segoe UI"
                 Padding="5" Margin="10">
             <Button.Content>Save this Set</Button.Content>
         </Button>
-        <WrapPanel Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="10"
+        <WrapPanel Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="11"
                    HorizontalAlignment="Center">
             
             <Button Click="SMS_Button_Click"
@@ -173,7 +199,7 @@
         
 
         <Button Click="Home_Button_Click"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="11"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="12"
                 FontSize="40" FontWeight="Bold"
                 Padding="5" Margin="10" FontFamily="Segoe UI">
             <Button.Content>Home</Button.Content>
