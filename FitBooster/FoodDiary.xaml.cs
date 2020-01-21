@@ -21,12 +21,21 @@ namespace FitBooster
             AddProductToMeal addProductToMeal = new AddProductToMeal(this, mealType);
             addProductToMeal.Show();
         }
-        
+
         private void SaveSet_Button_Click(object sender, RoutedEventArgs e)
         {
             if (AreListsEmpty()) return;
 
-            Diet diet = new Diet("N/A", "N/A");
+            string name = SetName.Text;
+            string description = SetDescription.Text;
+
+            if (name.Trim().Equals("") || description.Trim().Equals(""))
+            {
+                MessageBox.Show("You must provide a name and description of set!");
+                return;
+            }
+
+            Diet diet = new Diet(name, description);
 
             for (int i = 0; i < breakfastProductsList.Items.Count; i++)
                 diet.AddProduct((DietProduct)breakfastProductsList.Items[i]);
