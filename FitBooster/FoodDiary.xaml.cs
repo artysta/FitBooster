@@ -7,7 +7,7 @@ namespace FitBooster
     /// <summary>
     /// Interaction logic for FoodDiary.xaml
     /// </summary>
-    public partial class FoodDiary : Window, IFoodDiaryWindow
+    public partial class FoodDiary : Window
     {
         public FoodDiary()
         {

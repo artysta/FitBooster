@@ -10,11 +10,11 @@ namespace FitBooster
     /// </summary>
     public partial class AddProductToMeal : Window
     {
-        private IFoodDiaryWindow diary;
+        private FoodDiary diary;
         private List<Product> products;
         private string mealType;
 
-        public AddProductToMeal(IFoodDiaryWindow diary, string mealType)
+        public AddProductToMeal(FoodDiary diary, string mealType)
         {
             InitializeComponent();
             this.diary = diary;
