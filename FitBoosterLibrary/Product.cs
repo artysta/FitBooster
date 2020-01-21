@@ -24,6 +24,7 @@ namespace FitBoosterLibrary
         // Amount of proteins (in grams) contained in one package of product.
         private double _proteins;
 
+        public Product() { }
         public Product(string name, string description, MeasurementUnits unit, double weight, double calories, double fat, double carbs, double proteins)
         {
             Name = name;
