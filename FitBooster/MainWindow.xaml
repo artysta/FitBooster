@@ -68,23 +68,12 @@
             calories remaining:
         </TextBlock>
 
-        <TextBlock PreviewMouseDown="TextBlock_PreviewMouseDown"
-                   Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" 
-                   FontSize="45" FontWeight="Bold" TextAlignment="Center"
-                   VerticalAlignment="Center" >
+        <Button PreviewMouseDown="TextBlock_PreviewMouseDown"
+                   Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Grid.RowSpan="2" 
+                   FontSize="45" FontWeight="Bold"
+                   VerticalAlignment="Center" Margin="20">
             Food Diary
-        </TextBlock>
-
-        <TextBlock Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="4"
-                   TextAlignment="Center" FontWeight="Bold" 
-                   VerticalAlignment="Center" Margin="0,20" FontSize="38">
-            Water Intake
-        </TextBlock>
-        <Button Grid.Column="3" Grid.Row="5" 
-                FontSize="40" 
-                Content="+250 ml"
-                Padding="10" Margin="10"/>
-        <TextBlock Grid.Column="4" Grid.Row="5"></TextBlock>
+        </Button>
 
         <Button Click="Calc_btn_Click" 
                 Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4" 
