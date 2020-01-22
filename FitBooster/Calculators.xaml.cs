@@ -29,7 +29,6 @@ namespace FitBooster
             objMainWindow.Show();
         }
 
-
         private void HideVisibility()
         {
             GenderInputLabel.Visibility = Visibility.Collapsed;
@@ -155,9 +154,13 @@ namespace FitBooster
                     return;
                 }
             }
-            catch (FormatException)
+            catch (NullReferenceException)
             {
-                CalcResult.Text = "invalid data";
+                MessageBox.Show("You have to fill every field!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

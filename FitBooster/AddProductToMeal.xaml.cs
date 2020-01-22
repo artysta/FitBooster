@@ -41,6 +41,14 @@ namespace FitBooster
             {
                 MessageBox.Show("Cannot add product to meal! Invalid data!");
             }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong! :(");
+            }
         }
     }
 }

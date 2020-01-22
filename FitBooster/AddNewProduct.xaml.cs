@@ -52,10 +52,23 @@ namespace FitBooster
                 myProducts.Show();
                 this.Close();
             }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("You have to fill every field!");
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Cannot save new product! Invalid data!");
             }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong! :(");
+            }
+
         }
 
         // Parses string to double.
