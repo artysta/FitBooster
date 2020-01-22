@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitBooster"
         mc:Ignorable="d"
-        Title="SavedMeals" Height="900" Width="1000">
+        Title="SavedMeals" Height="1000" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -59,12 +59,35 @@
         <ListView Name="dietsList" 
                   Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="4" Grid.RowSpan="2"
                   FontSize="16" FontFamily="Segoe UI" 
-                  Height="200" VerticalAlignment="Top">
+                  Height="200" VerticalAlignment="Top" SelectionChanged="dietsList_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="TotalCalories" Width="auto" DisplayMemberBinding="{Binding TotalCalories}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="6"
+                   FontSize="38" TextAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI">
+            Products included in selected diet:
+        </TextBlock>
+        
+        <ListView Name="productsList" 
+                  Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="7" Grid.RowSpan="2"
+                  FontSize="16" FontFamily="Segoe UI" 
+                  Height="200" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
+                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
+                    <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
+                    <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
+                    <GridViewColumn Header="Proteins" Width="auto" DisplayMemberBinding="{Binding Proteins}" />
                 </GridView>
             </ListView.View>
         </ListView>
