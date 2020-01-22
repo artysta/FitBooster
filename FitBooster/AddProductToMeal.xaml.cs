@@ -36,6 +36,8 @@ namespace FitBooster
 
                 DietProduct product = new DietProduct(products[i], amount);
                 diary.AddProductToList(product, mealType);
+
+                this.Close();
             }
             catch (FormatException)
             {
