@@ -21,6 +21,8 @@ namespace FitBooster
             IProductsProvider provider = new XMLProductsParser();
             List<Product> products = provider.GetAllProducts();
 
+            if (products == null) return;
+
             foreach (Product p in products)
             {
                 Console.WriteLine(p.ToString());
