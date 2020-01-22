@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UpdateParameters.xaml.cs">
+      <DependentUpon>UpdateParameters.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddNewProduct.xaml.cs">
       <DependentUpon>AddNewProduct.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
       <DependentUpon>SavedMeals.xaml</DependentUpon>
     </Compile>
     <Compile Include="sv\VerticalScrollBarVisibility.cs" />
+    <Page Include="UpdateParameters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="AddNewProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
