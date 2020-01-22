@@ -22,22 +22,20 @@ namespace FitBooster
                 // Get informations about product.
                 string name = NameInput.Text;
                 string description = DescriptionInput.Text;
-
-                MeasurementUnits unit;
+                string unit;
                 double weight;
 
                 if (UnitInput.SelectedIndex == 0)
                 {
-                    unit = MeasurementUnits.Grams;
+                    unit = "g";
                     weight = GetParsedDouble(WeightInput.Text.ToString());
-                    
                 }
                 else
                 {
-                    unit = MeasurementUnits.Milliliters;
+                    unit = "ml";
                     weight = GetParsedDouble(CapacityInput.Text.ToString());
                 }
-                    
+                
                 double calories = GetParsedDouble(CaloriesInput.Text.ToString());
                 double carbs = GetParsedDouble(CarbsInput.Text.ToString());
                 double proteins = GetParsedDouble(ProteinsInput.Text.ToString());
@@ -72,11 +70,7 @@ namespace FitBooster
         }
 
         // Parses string to double.
-        private double GetParsedDouble(string str)
-        {
-            Console.WriteLine(str);
-            return double.Parse(str, CultureInfo.InvariantCulture);
-        }
+        private double GetParsedDouble(string str) => double.Parse(str, CultureInfo.InvariantCulture);
 
         private void UnitInput_DropDownClosed(object sender, EventArgs e)
         {

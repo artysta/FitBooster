@@ -25,7 +25,7 @@ namespace FitBoosterLibrary
         private double _proteins;
 
         public Product() { }
-        public Product(string name, string description, MeasurementUnits unit, double weight, double calories, double fat, double carbs, double proteins)
+        public Product(string name, string description, string unit, double weight, double calories, double fat, double carbs, double proteins)
         {
             Name = name;
             Description = description;
@@ -63,14 +63,7 @@ namespace FitBoosterLibrary
             get => _unit;
             set
             {
-                if (value.Equals(MeasurementUnits.Grams.ToString()))
-                {
-                    _unit = "g";
-                }
-                else
-                {
-                    _unit = "ml";
-                }
+                _unit = value;
             }
         }
 
