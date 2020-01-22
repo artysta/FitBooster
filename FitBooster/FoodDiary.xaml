@@ -77,7 +77,7 @@
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
-                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Amount" Width="auto" DisplayMemberBinding="{Binding Weight}" />
                     <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
                     <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
                     <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
@@ -108,7 +108,7 @@
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
-                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Amount" Width="auto" DisplayMemberBinding="{Binding Weight}" />
                     <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
                     <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
                     <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
@@ -138,7 +138,7 @@
                     <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Unit" Width="auto" DisplayMemberBinding="{Binding Unit}" />
-                    <GridViewColumn Header="Weight" Width="auto" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Amount" Width="auto" DisplayMemberBinding="{Binding Weight}" />
                     <GridViewColumn Header="Calories" Width="auto" DisplayMemberBinding="{Binding Calories}" />
                     <GridViewColumn Header="Fat" Width="auto" DisplayMemberBinding="{Binding Fat}" />
                     <GridViewColumn Header="Carbs" Width="auto" DisplayMemberBinding="{Binding Carbs}" />
