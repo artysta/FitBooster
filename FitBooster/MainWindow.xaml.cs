@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using FitBoosterLibrary;
 
 namespace FitBooster
 {
@@ -23,6 +12,15 @@ namespace FitBooster
         public MainWindow()
         {
             InitializeComponent();
+            XMLParametersParser parser = new XMLParametersParser();
+            Parameter param = parser.GetLatestParameter();
+
+            if (param == null) return;
+
+            weigthLbl.Text = param.Weight.ToString();
+            bmiLbl.Text = param.Bmi.ToString();
+            targetBmiLbl.Text = param.TargetBmi.ToString();
+            lastUpdatedLbl.Text = string.Format("{0:d/M/yyyy}", param.LastUpdated);
         }
 
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -41,6 +39,14 @@ namespace FitBooster
             objCalculatorsWindow.Top = 0;
             objCalculatorsWindow.Left = 300; 
             objCalculatorsWindow.Show();
+        }
+
+        private void UpdateBtn_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            UpdateParameters update = new UpdateParameters();
+
+            update.Show();
+            this.Close();
         }
     }
 }

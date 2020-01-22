@@ -29,6 +29,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
@@ -44,42 +45,71 @@
             </WrapPanel>
         </TextBlock>
 
-        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" 
+        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="4"
                    FontSize="45" FontWeight="Bold" TextAlignment="Center" 
                    VerticalAlignment="Center">
             My parameters
         </TextBlock>
+
+        <!-- WEIGHT -->
         <TextBlock Grid.Column="3" Grid.Row="2"
-                   FontSize="22" TextAlignment="Center" Margin="0,20">
-            current weight: <LineBreak/>
-            current BMI: <LineBreak/>
-            target BMI:
+                   FontSize="22" TextAlignment="Center">
+            Weight:
+        </TextBlock>
+        <TextBlock Name="weigthLbl" Grid.Column="4" Grid.Row="2"
+                   FontSize="22" TextAlignment="Center">
+            N/A
         </TextBlock>
 
-        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" 
-                   FontSize="45" FontWeight="Bold" TextAlignment="Center"
-                   VerticalAlignment="Center">
-            Calorie Balance
+        <!-- BMI -->
+        <TextBlock Grid.Column="3" Grid.Row="3"
+                   FontSize="22" TextAlignment="Center">
+            BMI:
         </TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="3" 
-                   FontSize="22" TextAlignment="Center" Margin="0,20">
-            consumed calories: <LineBreak/>
-            burned calories: <LineBreak/>
-            calories remaining:
+        <TextBlock Name="bmiLbl" Grid.Column="4" Grid.Row="3"
+                   FontSize="22" TextAlignment="Center">
+            N/A
         </TextBlock>
 
+        <!-- TARGET BMI -->
+        <TextBlock Grid.Column="3" Grid.Row="4"
+                   FontSize="22" TextAlignment="Center">
+            Target BMI:
+        </TextBlock>
+        <TextBlock Name="targetBmiLbl" Grid.Column="4" Grid.Row="4"
+                   FontSize="22" TextAlignment="Center">
+            N/A
+        </TextBlock>
+
+        <!-- LAST UPDATED -->
+        <TextBlock Grid.Column="3" Grid.Row="5"
+                   FontSize="22" TextAlignment="Center">
+            Last updated:
+        </TextBlock>
+        <TextBlock Name="lastUpdatedLbl" Grid.Column="4" Grid.Row="5"
+                   FontSize="22" TextAlignment="Center">
+            N/A
+        </TextBlock>
+
+        <Button PreviewMouseDown="UpdateBtn_PreviewMouseDown"
+                   Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4"
+                   FontSize="45" FontWeight="Bold"
+                   VerticalAlignment="Center" Margin="20">
+            Update my parameters
+        </Button>
+        
         <Button PreviewMouseDown="TextBlock_PreviewMouseDown"
-                   Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Grid.RowSpan="2" 
+                   Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="4"
                    FontSize="45" FontWeight="Bold"
                    VerticalAlignment="Center" Margin="20">
             Food Diary
         </Button>
 
         <Button Click="Calc_btn_Click" 
-                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4" 
+                Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="4" 
                 FontSize="45" FontWeight="Bold" FontFamily="Segoe UI" 
                 Padding="20" Margin="20">
-            Calculate your BMI, BMR, AMR &amp; TER!
+            Calculate your BMI, BMR &amp; AMR!
         </Button>
     </Grid>
 </Window>
