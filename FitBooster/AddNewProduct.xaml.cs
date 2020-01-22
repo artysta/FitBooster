@@ -96,5 +96,12 @@ namespace FitBooster
                 CapacityInput.Visibility = Visibility.Visible;
             }
         }
+
+        private void MyProducts_Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyProducts myProducts = new MyProducts();
+            myProducts.Show();
+            Close();
+        }
     }
 }
