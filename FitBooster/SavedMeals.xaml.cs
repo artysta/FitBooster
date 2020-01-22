@@ -61,5 +61,18 @@ namespace FitBooster
                 dietsList.Items.Add(d);
             }
         }
+
+        private void dietsList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Diet diet = (Diet)dietsList.SelectedItem;
+            List<DietProduct> products = diet.Products;
+
+            if (productsList.Items.Count != 0) productsList.Items.Clear();
+
+            for (int i = 0; i < products.Count; i++)
+            {
+                productsList.Items.Add(products[i]);
+            }
+        }
     }
 }
