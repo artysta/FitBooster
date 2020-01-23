@@ -39,13 +39,13 @@
 
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" 
                    FontSize="48" TextAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI" 
-                   Margin="20" Background="#FCF3CF">
+                   Margin="20" Background="#0277bd">
             <WrapPanel Orientation="Vertical">
                 <WrapPanel Orientation="Horizontal">
-                    <TextBlock Foreground="#5DADE2 ">Fit</TextBlock>
-                    <TextBlock Foreground="#FF5733">Booster</TextBlock>
+                    <TextBlock Foreground="#FFFFFF ">Fit</TextBlock>
+                    <TextBlock Foreground="#67daff">Booster</TextBlock>
                 </WrapPanel>
-                <TextBlock Foreground="#D7BDE2">Meal Sets</TextBlock>
+                <TextBlock Foreground="#FFFFFF">Meal Sets</TextBlock>
             </WrapPanel>
         </TextBlock>
 

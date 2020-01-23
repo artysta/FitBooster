@@ -37,7 +37,7 @@
 
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" 
                    FontSize="45" TextAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" FontFamily="Segoe UI" 
-                   Margin="20" Background="#FCF3CF">
+                   Margin="20" Background="#0277bd" Foreground="#FFFFFF">
             Enter the detailed information about the product per package
         </TextBlock>
 
