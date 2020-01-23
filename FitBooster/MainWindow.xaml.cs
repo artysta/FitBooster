@@ -26,7 +26,7 @@ namespace FitBooster
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             FoodDiary objFoodDiaryWindow = new FoodDiary();
-            this.Visibility = Visibility.Hidden;
+            Close();
             objFoodDiaryWindow.Top = 0;
             objFoodDiaryWindow.Left = 300;
             objFoodDiaryWindow.Show();
@@ -35,7 +35,7 @@ namespace FitBooster
         private void Calc_btn_Click(object sender, RoutedEventArgs e)
         {
             Calculators objCalculatorsWindow = new Calculators();
-            this.Visibility = Visibility.Hidden;
+            Close();
             objCalculatorsWindow.Top = 0;
             objCalculatorsWindow.Left = 300; 
             objCalculatorsWindow.Show();
