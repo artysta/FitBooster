@@ -24,7 +24,7 @@ namespace FitBooster
         private void MP_Button_Click(object sender, RoutedEventArgs e)
         {
             MyProducts objMPWindow = new MyProducts();
-            this.Visibility = Visibility.Hidden;
+            Close();
             objMPWindow.Top = 0;
             objMPWindow.Left = 300;
             objMPWindow.Show();
@@ -33,7 +33,7 @@ namespace FitBooster
         private void FD_Button_Click(object sender, RoutedEventArgs e)
         {
             FoodDiary objFDWindow = new FoodDiary();
-            this.Visibility = Visibility.Hidden;
+            Close();
             objFDWindow.Top = 0;
             objFDWindow.Left = 300;
             objFDWindow.Show();
@@ -42,7 +42,7 @@ namespace FitBooster
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow objMainWindow = new MainWindow();
-            this.Visibility = Visibility.Hidden;
+            Close();
             objMainWindow.Top = 0;
             objMainWindow.Left = 300;
             objMainWindow.Show();
