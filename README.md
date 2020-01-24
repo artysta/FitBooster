@@ -1,6 +1,6 @@
 ## #1 Aplikacja ***FitBooster***
 
-Prosta aplikacja, pozwalająca na tworzenie własnych jadłospisów na każdy dzień i eksportowanie ich do plików tekstowych oraz na korzystanie z kalkulatorów dietetycznych i spalonych kalorii.
+Prosta aplikacja, pozwalająca na tworzenie własnych jadłospisów na każdy dzień i eksportowanie ich do plików tekstowych oraz na korzystanie z kalkulatorów dietetycznych.
 
 Aplikacja wykonana na potrzeby projektu semestralnego z przedmiotu **Programowanie obiektowe - WSEI Kraków**.
 
@@ -18,10 +18,46 @@ Aplikacja wykonana na potrzeby projektu semestralnego z przedmiotu **Programowan
    - **AMR** - czynnej przemiany materii,
    - **BMR** - podstawowej przemiany materii,
    - **TER** - dziennego zapotrzebowania na energię,
-   - ...
-- korzystanie z kalkulatora spalonych kalorii, pozwalającego na obliczenie ilości kalorii, które spalane są podczas wykonywania różnych ćwiczeń (z uwzględnieniem czasu ich trwania, ilości powtórzeń, czy intensywności).
 
 ## #3 Prototyp GUI aplikacji
+
+<table>D
+   <tr>
+      <td>
+         <img src="/screenshots/home_page.png" alt="home_page.png"/>
+      </td>
+      <td>
+         <img src="/screenshots/bmi_bmr_amr_ter_calculators.png" alt="bmi_bmr_amr_ter_calculators.png"/>
+      </td>
+      <td>
+         <img src="/screenshots/food_diary.png" alt="food_diary.png"/>
+      </td>
+   </tr>
+</table>
+
+
+## #1 Application ***FitBooster***
+
+A simple application that allows to create your own meal plans for every day, to export them into text files and to calculate your BMI etc. based on your body parameters.
+
+The application was created as a project for the needs of the course **Programowanie obiektowe - WSEI Kraków**
+
+**Authors:**
+ - Adrian Kurek - https://github.com/artysta
+ - Natalia Krawczyk - https://github.com/nat13alia
+
+## #2 Initial Assumptions
+
+**Preliminarily** the application will allow you to:
+- create your own meal plans, on the basis of the products already existing in the application - formed by the user meal plan will provide the information about the energy value of meals and their nutritional facts,
+- add your own products with the necessary details (amount of calories, carbs, proteins and fat),
+- use various calculatours, such as:
+   - **BMI** - body mass index,
+   - **AMR** - active metabolic rate,
+   - **BMR** - basal metabolic rate,
+   - **TER** - total expense ratio,
+
+## #3 GUI prototype of the application
 
 <table>D
    <tr>
