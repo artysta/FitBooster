@@ -44,7 +44,8 @@ namespace FitBooster
         private void UpdateBtn_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             UpdateParameters update = new UpdateParameters();
-
+            update.Top = 0;
+            update.Left = 400;
             update.Show();
             this.Close();
         }
