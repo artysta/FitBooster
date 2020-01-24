@@ -21,7 +21,7 @@ Aplikacja wykonana na potrzeby projektu semestralnego z przedmiotu **Programowan
 
 ## #3 Prototyp GUI aplikacji
 
-<table>D
+<table>
    <tr>
       <td>
          <img src="/screenshots/home_page.png" alt="home_page.png"/>
@@ -38,7 +38,7 @@ Aplikacja wykonana na potrzeby projektu semestralnego z przedmiotu **Programowan
 
 ## #1 Application ***FitBooster***
 
-A simple application that allows to create your own meal plans for every day, to export them into text files and to calculate your BMI etc. based on your body parameters.
+A simple application that allows you to create your own meal plans for every day, export them into text files and to calculate your BMI etc. based on your body parameters.
 
 The application was created as a project for the needs of the course **Programowanie obiektowe - WSEI Kraków**
 
@@ -59,7 +59,7 @@ The application was created as a project for the needs of the course **Programow
 
 ## #3 GUI prototype of the application
 
-<table>D
+<table>
    <tr>
       <td>
          <img src="/screenshots/home_page.png" alt="home_page.png"/>
