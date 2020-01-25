@@ -16,8 +16,12 @@ namespace FitBoosterLibrary
         public string Name { get => _name; set { _name = value; } }
         // Returns or sets description of diet;
         public string Description { get => _description; set { _description = value; } }
-        // Returns or sets description of diet;
-        public double TotalCalories { get => GetTotalCalories();}
+
+        public double TotalCalories { get => GetTotalCalories(); }
+        public double TotalFat { get => GetTotalFat(); }
+        public double TotalCarbs { get => GetTotalCarbs(); }
+        public double TotalProteins { get => GetTotalProteins(); }
+
 
         // Returns or sets list of products.
         public List<DietProduct> Products { get => _products; set { _products = value; } }
@@ -48,9 +52,40 @@ namespace FitBoosterLibrary
             double total = 0;
 
             foreach (DietProduct p in Products)
-            {
                 total += p.Calories;
-            }
+
+            return total;
+        }
+
+        // Returns amount of total fat of diet.
+        public double GetTotalFat()
+        {
+            double total = 0;
+
+            foreach (DietProduct p in Products)
+                total += p.Fat;
+
+            return total;
+        }
+
+        // Returns amount of total carbs of diet.
+        public double GetTotalCarbs()
+        {
+            double total = 0;
+
+            foreach (DietProduct p in Products)
+                total += p.Carbs;
+
+            return total;
+        }
+
+        // Returns amount of total proteins of diet.
+        public double GetTotalProteins()
+        {
+            double total = 0;
+
+            foreach (DietProduct p in Products)
+                total += p.Proteins;
 
             return total;
         }
