@@ -60,7 +60,10 @@
                     <GridView>
                         <GridViewColumn Header="Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                         <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Description}" />
-                        <GridViewColumn Header="TotalCalories" Width="auto" DisplayMemberBinding="{Binding TotalCalories}" />
+                        <GridViewColumn Header="Total calories" Width="auto" DisplayMemberBinding="{Binding TotalCalories}" />
+                        <GridViewColumn Header="Total fat" Width="auto" DisplayMemberBinding="{Binding TotalFat}" />
+                        <GridViewColumn Header="Total carbs" Width="auto" DisplayMemberBinding="{Binding TotalCarbs}" />
+                        <GridViewColumn Header="Total proteins" Width="auto" DisplayMemberBinding="{Binding TotalProteins}" />
                     </GridView>
                 </ListView.View>
             </ListView>
