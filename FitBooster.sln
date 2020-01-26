@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitBooster", "FitBooster\Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitBoosterLibrary", "FitBoosterLibrary\FitBoosterLibrary.csproj", "{FB115CAA-AAF2-4711-8818-07491119D2E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitBoosterConsoleApp", "FitBoosterConsoleApp\FitBoosterConsoleApp.csproj", "{22FC5A15-7E5A-4DF1-9E0C-53322150EAD0}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FitBoosterSetup", "FitBoosterSetup\FitBoosterSetup.vdproj", "{19278BCE-CFC2-48C6-AB2D-A73A406F75C2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
